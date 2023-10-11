@@ -1,6 +1,6 @@
 //  Stack Memory ( inside primitive data type stack memory use)
 
-
+// it take the copy of value and changes in the copy of value
 
 let name="sarfraj";
 let lastName=name;
