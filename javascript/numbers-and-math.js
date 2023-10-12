@@ -13,3 +13,23 @@ console.log(seperateNumberWithComma.toLocaleString('en-IN')); //by default it se
 /*
 it detects if your computer local language if india it by default user inr
 */
+
+
+
+/* --- ------ Maths  ------------------*/
+// maths is an object
+
+console.log(Math);
+console.log(Math.round(4.4)); // it returns value between 0-1
+console.log(Math.ceil(4.3));
+console.log(Math.floor(4.9));
+console.log(Math.sqrt(25));
+console.log(Math.pow(5,3));
+console.log(Math.sign(5)); //if value is positive return 1 negative -1 positive 0 return 0 and vice versa 
+
+/*  most of the time use case of math.random */
+
+console.log(Math.floor(Math.random()*10)+1);
+const minimum=10;
+const maximum=15;
+console.log(Math.floor(Math.random()*(maximum-minimum+1))+minimum); // here 1 added because the final value should not be 0
