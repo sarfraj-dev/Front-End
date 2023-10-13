@@ -16,4 +16,4 @@ console.log(creatDate.toString());
 //  Time
 /*
 where we need time :-  when you build quiz app or poll to find time
-/*
+*/
