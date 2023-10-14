@@ -3,3 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+.backgroundImg{
+    background-image: url('/ui-projects/spacex/assets/Homepage_Starlink_SLC_40_Desktop_5b1e6b5dd0.jpg');
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
