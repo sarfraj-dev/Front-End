@@ -1,3 +1,8 @@
+/*
+Note : - array is non primitive data type and use heap memory so it change the original value
+*/
+
+
 // singleton
 // Object.jsUser  //this is object and in these type of object singleton is present
 
@@ -29,6 +34,33 @@ console.log(typeof(addSymbol));
 // console.log(jsUser.age);
 // console.log(jsUser["age"]);
 
-//in the last name senario you cannot access using .
+//in the last name senario you cannot access using console.log(jsUser.last name);
 console.log(jsUser["last name"]);
+*/
+
+/* how to update object
+
+// jsUser.email="sarfraj@121gmail.com"
+// console.log(jsUser);
+// jsUser[addSymbol]="salar"
+// console.log(jsUser);
+*/
+
+/* how to perfom function in object
+
+jsUser.gretting=function(){
+    console.log("hello world");
+}
+// console.log(jsUser.gretting); // when you write method like this it shows [Function (anonymous)]
+// console.log(jsUser.gretting()); // we have to write method like this
+console.log("A",jsUser);
+console.log(jsUser);
+
+jsUser.grettingSecond=function(){
+    console.log("hello world second");
+}
+console.log(jsUser.grettingSecond());
+console.log("B",jsUser);
+console.log(jsUser);
+
 */

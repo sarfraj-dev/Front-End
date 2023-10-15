@@ -37,7 +37,7 @@ console.log(test);
 console.log(arr)
 
 
-note :- array is non primitive data type it use heap so it change the original value
+// note :- array is non primitive data type it use heap so it change the original value
 */
 
 // slice splice
@@ -48,7 +48,7 @@ const mySlice = arr.slice(1,3) // here value is (1,3) so 1,2 three neglate and c
 console.log(mySlice);
 console.log("B",arr);
 
-const mySplice= arr.śśsplice(1,3) // here value is (1,3) so 1,2,3 create array so splice value is [2,3,4] and it change the original array
+const mySplice= arr.splice(1,3) // here value is (1,3) so 1,2,3 create array so splice value is [2,3,4] and it change the original array
 console.log(mySplice);
 console.log("c",arr);
 */
@@ -62,10 +62,10 @@ note :- the main differe between slice and splice is when you perform slice oper
 
 const marvelHeros=["thor","ironman","spiderman"]
 const dc=["superman","flash","batman"];
-//marvelHeros.push(dc)  // when we use push method to merge two array second array added as element[ 'thor', 'ironman', 'spiderman', [ 'superman', 'flash', 'batman' ] ]
+// marvelHeros.push(dc)  // when we use push method to merge two array second array added as element[ 'thor', 'ironman', 'spiderman', [ 'superman', 'flash', 'batman' ] ]
 // console.log(marvelHeros);
-const newHeros=[...marvelHeros,...dc]
-console.log(newHeros);
+// const newHeros=[...marvelHeros,...dc]
+console.log(marvelHeros);
 */
 
 /*
