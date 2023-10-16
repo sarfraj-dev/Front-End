@@ -15,14 +15,14 @@ Note : - array is non primitive data type and use heap memory so it change the o
 /*
 const jsUser={
     name:"sarfraj",
-    [addSymbol]:"interview", //how to add symbol interview question into object if you add like addSymbol:"interview", in console it prints the value only but if you check the type of that time it shows string but we want datatype as symbol only
+    // [addSymbol]:"interview", //how to add symbol interview question into object if you add like addSymbol:"interview", in console it prints the value only but if you check the type of that time it shows string but we want datatype as symbol only
     "last name":"sayyad",
     age:22,
     location:"airoli",
     email:"sarfraj@google.com",
     lastLogin:["monday", "friday"]
-}
-*/
+}*/
+
 /*
 // interview console output
 console.log(typeof(jsUser.addSymbol)); //here the type of addsymbol is string but we want as symbol only so
@@ -63,8 +63,8 @@ jsUser.grettingSecond=function(){
 console.log(jsUser.grettingSecond());
 console.log("B",jsUser);
 console.log(jsUser);
-
 */
+
 /*
 // how to access same object referemce using this
 jsUser.whishing=function(){
