@@ -34,15 +34,25 @@ const userLogin= loginUser("rajesh"); // here we assign the variable so it run
 console.log(userLogin);  
 
 */
-/*
 
+/*
 // shopping cart:-  in shopping cart user add multiple items in cat but in above examples we pass argument it define like 2,3 values
 //rest operator ...
 
-function calculateCartPrice(...num1) {
- return num1   
-}
-console.log(calculateCartPrice(200,300,400,500)); //[ 200, 300, 400, 500 ]
+// function calculateCartPrice(...num1) {
+//  return num1   
+// }
+// console.log(calculateCartPrice(200,300,400,500)); //[ 200, 300, 400, 500 ]
+
+/*
+ Error : SyntaxError: Rest parameter must be last formal parameter
+
+function calculateCartPrice(...a,...num1) {
+    return num1   
+   }
+   console.log(calculateCartPrice(200,300,400,500));
+   */
+
 /*
 when we not know about how much argument is passed that time we use reast operator 
 so we need not to passed multiple parameter  and the value is in array [ 200, 300, 400, 500 ] 
@@ -68,6 +78,7 @@ you can passed object as an argument
 
 */
 
+/*
 // Array passed in function
 const array=[1,2,3,4,5]
 function accessArray(parameterArray) {
