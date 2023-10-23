@@ -77,3 +77,68 @@ do {
     indexofDo++;
 } while (indexofDo<doArray.length);*/
 
+
+//higher order array loops
+
+//for of loop
+/*
+const arr=[1,2,3,4,5,6,7,8,9];
+for (const value of arr) {
+ console.log(value);   
+}*/
+
+/*
+const name="sarfraj";
+for (const val1 of name) {
+    console.log(`${val1}`);
+}
+*/
+const myObject={
+    game:'pubg',
+    game2:"freefire"
+}
+
+/* 
+note : - for of loop is not use in object
+
+for (const obj of myObject) {
+    console.log(obj);
+}*/
+/* for in loop is used to iterat object
+
+for (const key in myObject) {
+   console.log(`${myObject[key]}`);
+}
+*/
+/*
+const forInArrY=["swapnil","suresh","bomble"];
+
+for (const key in forInArrY) {
+ console.log(`${forInArrY[key]}`);
+}*/
+
+const language=["js",'cpp','py'];
+// language.forEach(function (items){console.log(`${items}`);})
+
+// function name(items) {
+//     console.log(items);
+// }
+// language.forEach(name)
+
+// language.forEach( (items,ind,aa)=>{console.log(items,ind,aa);})
+
+const myCoding=[
+    {
+        languageName:"javascript",
+        languageFile:"js"
+    },
+    {
+        languageName:"python",
+        languageFile:"py"
+    },
+    {
+        languageName:"java",
+        languageFile:"java"
+    }
+]
+myCoding.forEach((items)=>{console.log(items.languageName)})
