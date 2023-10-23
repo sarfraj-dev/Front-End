@@ -32,6 +32,7 @@ if (index===5) {
     
 }
 */
+/*
 for (let index = 1; index < 20; index++) {
 if (index===5) {
     console.log("5 detected");
@@ -39,4 +40,40 @@ if (index===5) {
 }
     console.log(`${index}`);
     
+}*/
+
+
+//while loop
+/*
+let index=1
+while (index<10) {
+    console.log(`${index}`);
+    index=index+2;
 }
+*/
+/*
+let newArray=['raj','sarfraj','swapnil']
+let index=0
+while (index<newArray.length) {
+    const element=newArray[index]
+    console.log(element);
+    index++
+    // console.log(`after increment ${index}`);
+}*/
+
+// do while loop
+/*
+let score =1
+do {
+    console.log(`${score}`);
+    score++;
+} while (score <10);*/
+/*
+
+let doArray=["sarfraj","salar","sayyad"];
+let indexofDo=0;
+do {
+    console.log(`${doArray[indexofDo]}`);
+    indexofDo++;
+} while (indexofDo<doArray.length);*/
+
