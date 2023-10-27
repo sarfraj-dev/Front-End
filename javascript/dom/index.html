@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="dark">
+    <!-- <div class="dark">
         <h1 id="title" class="headingTag">dom manipulation <span style="display: none;">empty</span></h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat aspernatur eveniet ipsam cupiditate aliquam? Exercitationem eligendi provident, vitae totam ipsum adipisci nisi, esse consectetur, voluptatum laborum a laudantium placeat.</p>
     <h2>sarfraj</h2>
@@ -18,6 +18,31 @@
         <li class="listItem">second</li>
         <li class="listItem">third</li>
     </ul>
+    </div> -->
+
+    <div class="parent">
+        <div class="day">mon</div>
+        <div class="day">tue</div>
+        <div class="day">wed</div>
+        <div class="day">thr</div>
     </div>
+    <script>
+        const parentClass=document.querySelector('.parent')
+        const dayOne=document.querySelector('.day')
+        console.log(parentClass.childNodes);
+        // console.log(parentClass);
+        // console.log(parentClass.children);
+        // const converArray=Array.from(parentClass.children);
+        // converArray[0].style.fontWeight="bold"
+
+        // console.log(converArray[0]);
+
+//         converArray.forEach((items)=>{
+// // console.log(items.innerHTML);
+//         })
+
+
+    </script>
 </body>
+
 </html>
