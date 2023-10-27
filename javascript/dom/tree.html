@@ -10,8 +10,8 @@
 </body>
 <script>
     function name(){
-        
-
+        const number=16
+        for(var i = 0; i < number; i++){ 
 
 
         const createDiv=document.createElement('div')
@@ -22,11 +22,16 @@ createDiv.style.padding="5%"
 const textDisplay=document.createTextNode("sarfraj")
 createDiv.appendChild(textDisplay)
 
- return document.body.appendChild(createDiv)
-    }
 
- const addName=name()
- console.log(addName);
+  document.body.appendChild(createDiv)
+ 
+}
+
+
+    }
+name()
+//  const addName=name()
+//  console.log(addName);
 
 </script>
 </html>
