@@ -71,7 +71,7 @@ do {
 /*
 
 let doArray=["sarfraj","salar","sayyad"];
-let indexofDo=0;
+let indexofDo=3;
 do {
     console.log(`${doArray[indexofDo]}`);
     indexofDo++;
@@ -141,4 +141,7 @@ const myCoding=[
         languageFile:"java"
     }
 ]
-myCoding.forEach((items)=>{console.log(items.languageName)})
+// myCoding.forEach((items)=>{console.log(items.languageName)})
+for (const key in myCoding) {
+   console.log(myCoding[key].languageName);
+}
