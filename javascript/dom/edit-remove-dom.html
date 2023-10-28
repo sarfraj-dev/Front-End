@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+    <script>
+        function addLanguage(language) {
+         const createList=document.createElement('li')
+         const ul=document.querySelector('.language')
+         createList.innerHTML=`${language}`   
+         ul.appendChild(createList)
+        }
+        addLanguage('py')
+        addLanguage('cpp')
+
+        function optimizeAddLanguage(language) {
+            const createList=document.createElement('li')
+            createList.appendChild(document.createTextNode(language)) //this line replage the innerHTML above code and append because when we use innerHTMK we have to traverse whole tree dom
+            document.querySelector('.language').appendChild(createList)
+            
+        }
+        optimizeAddLanguage('c')
+
+        // Edit
+//in li replace first child
+const firstLanguage=document.querySelector("li:first-child")
+console.log(firstLanguage);
+firstLanguage.outerHTML='<li>java</li>'
+
+
+
+//remove
+const remove=document.querySelector('li:nth-child(3)')
+console.log(remove);
+remove.remove()
+
+    </script>
+</body>
+</html>
