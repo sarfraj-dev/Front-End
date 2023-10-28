@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+    /* background-color: white; */
+    height: 100vh;
+    /* background-color: red; */
+}
+.colorDiv{
+    display: flex;
+    gap: 3%;
+    justify-content: center;
+}
+.colorBox{
+padding: 4%;
+border: 1px solid black;
+}
+.gray{
+background-color: gray;
+}
+.white{
+    background-color: white;
+}
+.yellow{
+    background-color: yellow;
+}
+.orange{
+    background-color: orange;
+}
