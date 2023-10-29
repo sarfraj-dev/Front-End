@@ -13,16 +13,18 @@ const result=document.querySelector('#result')
 
 
 if(height==='' || height <=0 || isNaN(height)){
-result.innerHTML="please enter a valid number"
+result.innerHTML="please enter a valid height"
 }
 else if(weight==='' || weight <=0 || isNaN(weight)){
-result.innerHTML="please "
+result.innerHTML="please enter a valid weight"
 }
+
+
 else{
     const formula=(weight/((height*height)/10000)).toFixed(2)
-    result.innerHTML=formula
+    result.innerHTML=formula;
 }
 
-
     })
+
 
