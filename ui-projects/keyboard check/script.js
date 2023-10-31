@@ -1,6 +1,5 @@
 const insert=document.querySelector('#insert')
 window.addEventListener('keydown',(e)=>{
-    console.log(e);
     insert.innerHTML=
    ` <table>
   <tr>
