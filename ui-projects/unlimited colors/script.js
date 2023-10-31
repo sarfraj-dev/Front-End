@@ -9,7 +9,6 @@ const randomColors=()=>{
     for (let i = 0; i < 6; i++) {
       color +=  values[Math.floor(Math.random()*16)]
     }
-    // console.log(color);
 return color
 }
 
