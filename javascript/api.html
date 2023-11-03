@@ -7,12 +7,22 @@
     <style>
         .card{
             border: 1px solid #000;
+            height: 30vh;
+            width: 60%;
+            margin: auto;
+            /* background-color: red; */
+        }
+        button{
+            background-color: aquamarine;
+            border: none;
+            padding: 7px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     
-
+    <!-- avatar_url -->
 
     <script>
 //         const url="https://api.github.com/users/sarfraj-dev"
@@ -30,6 +40,56 @@
 //       xhr.send()
 
 
+
+const cart=document.createElement('div')
+cart.setAttribute('class','card')
+const img=document.createElement('img');
+const followers=document.createElement('p')
+const button=document.createElement('button')
+button.textContent="Click Me"
+
+
+
+
+cart.appendChild(img)
+cart.appendChild(followers)
+cart.appendChild(button)
+
+document.body.appendChild(cart)
+
+const responseUrl="https://api.github.com/users/sarfraj-dev"
+const xhr=new XMLHttpRequest()
+xhr.open('GET', responseUrl);
+let data;
+xhr.onreadystatechange=function(){
+
+     data=JSON.parse(this.responseText)
+     
+     button.addEventListener('click',()=>{
+console.log(data.followers);
+followers.innerHTML=data.followers
+img.src=data.avatar_url
+    
+})
+    }
+
+
+// xhr.onreadystatechange = function () {
+//     if (xhr.readyState === 4 && xhr.status === 200) {
+//         data = JSON.parse(xhr.responseText); // Assign value to the outer scoped data variable
+//     }
+//     button.addEventListener('click',()=>{
+// console.log(data.followers);
+// followers.innerHTML=data.followers
+// img.src=data.avatar_url
+    
+// })
+
+// };
+
+
+
+xhr.send()
     </script>
 </body>
 </html>
