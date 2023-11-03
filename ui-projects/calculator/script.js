@@ -3,14 +3,19 @@ const display=document.querySelector('.display');
 const clear=document.querySelector('.clear');
 
 
- for (const items of input) {
-    items.addEventListener('click',(e)=>{
 
-      const ts=  display.innerHTML=e.target
+const values=input.forEach(items => {
 
+  items.addEventListener('click',(e)=>{
+    let clickedValue = e.target.textContent;
+    display.textContent += clickedValue;
+// console.log(display);
 
-        console.log(ts);
+  })
 
-    })
- }
+});
 
+clear.addEventListener('click',(e)=>{
+  console.log(display.remove());
+  
+})
