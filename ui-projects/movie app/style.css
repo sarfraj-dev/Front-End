@@ -1,0 +1,19 @@
+.li{
+border: 1px solid black;
+width: 29%;
+list-style: none;
+padding: 0;
+margin-bottom: 1%;
+
+}
+.li img{
+    /* width: 30%; */
+}
+.imgUL{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4.5%;
+        flex-wrap: wrap;
+    /* width: 100%; */
+    padding: 0;
+}
