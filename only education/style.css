@@ -1,0 +1,567 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.spacingDiv {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1130px;
+}
+.flexDiv {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.boxPadding {
+  padding: 20px;
+}
+.marginBottom {
+  margin-bottom: 8px;
+}
+.sectionTitle{
+  color: black;
+  font-size: 27px;
+  font-weight: bolder;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  font-family: system-ui;
+}
+.responsiveMarginBottom{
+width: 23%;
+}
+/*  header start */
+.headerButton a{
+  color: white;
+    background: #ff7900;
+    padding: 8px 10px;
+    font-weight: 700;
+    border-radius: 2px;
+    font-size: 15px;
+    margin-left: 5%;
+    
+}
+.headerLogo img{
+  max-width: 150px;
+}
+.headerMargin{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.headerButton{
+  width: 25%;
+}
+.headerFlex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+/*  header end */
+
+/* banner img start */
+.slick-slide {
+  width: 280px;
+}
+.bannerTextTop{
+  align-items: start !important;
+}
+.bannerImg{
+  background-image: url(Assets/iitmumbai.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+/* banner form start */
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  /* max-width: 40%; */
+  background: #003b5b;
+  padding: 25px 20px;
+
+}
+.formContainer h4{
+  color: white;
+  text-align: center;
+  margin-bottom: 3%;
+  font-size: 20px;
+}
+
+input {
+  /* width: 95%; */
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+input:focus-visible{
+  outline: none;
+}
+select:focus-visible{
+  outline: none;
+}
+
+select {
+  /* width: 99%; */
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+option{
+  font-size: 19px;
+}
+
+#submit {
+  border: none;
+  background-color: orangered;
+  color: white;
+  width: 98%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: #333;
+}
+.bannerAlignCenter{
+  align-items: center !important;
+  padding: 7% 0;
+  }
+ .bannerAlignCenter h1 {
+    text-align: center;
+    color: white;
+    font-size: 44px;
+    font-family: system-ui;
+  }
+  #formParentDiv{
+    width: 50%;
+  }
+
+  #currentDate{
+    display: none;
+  }
+/* banner form end */
+
+/* banner img end */
+
+/* Top College Start */
+.collegelist {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 12px 0px;
+  height: fit-content;
+  width: fit-content;
+}
+.collegeTitle img {
+  max-width: 50px;
+}
+.collegeDegree h4 {
+  color: black;
+  font-size: 16px;
+}
+.collegePrice {
+  color: #3eae8d;
+  font-weight: 700;
+}
+.collegePriceYear {
+  color: #999;
+  font-size: small;
+}
+.bar {
+  padding-left: 8px;
+  padding-right: 8px;
+  color: rgb(232, 232, 232);
+}
+.Specialization span {
+  font-size: 14px;
+  color: black;
+}
+.collegeLabelFlex {
+  display: flex;
+  margin-right: 0.5rem;
+  align-items: center;
+}
+.yearSpan {
+  font-size: 13px;
+  margin-left: 5px;
+}
+.labelSpan img {
+  max-width: 14px;
+}
+.collegeLabels {
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+.collegeHeading {
+  display: flex;
+  gap: 2%;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.collegeTitle {
+  border-bottom: 1px solid rgb(232, 232, 232);
+  padding-bottom: 15px;
+  margin-bottom: 2%;
+}
+.collegeTitle h3 {
+  font-size: 18px;
+}
+.readMore {
+  color: rgb(255, 121, 0);
+  background-color: rgba(255, 121, 0, 0.1);
+  border-radius: 4px;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+}
+.applyNow {
+  color: rgb(255, 121, 0);
+  background-color: rgba(255, 121, 0, 0.1);
+  border-radius: 4px;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.applyNow:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 121, 0);
+  box-shadow: none;
+}
+.readMore:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 121, 0);
+  box-shadow: none;
+}
+.clickReadMore {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  margin-top: 2%;
+}
+.clickReadMore p {
+  font-size: 15px !important;
+}
+.courseTable {
+  font-size: 16px !important;
+  border: none !important;
+  width: 100% !important;
+  color: #333;
+  border-collapse: collapse;
+  margin: 2% 0;
+  margin-bottom: 3%;
+}
+.courseTable tbody tr:nth-of-type(2n + 1) {
+  background-color: rgb(249, 249, 249) !important;
+}
+.courseTable td {
+  border: 1px solid rgb(221, 221, 221);
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 2;
+  color: black;
+}
+.placementTable {
+  font-size: 16px !important;
+  border: none !important;
+  width: 100% !important;
+  border-collapse: collapse;
+}
+.placementTable th {
+  background-color: rgb(139, 189, 196) !important;
+  color: white;
+  border: 1px solid rgb(221, 221, 221);
+  padding: 12px;
+}
+.placementTable tbody tr:nth-of-type(2n + 1) {
+  background-color: rgb(249, 249, 249) !important;
+}
+.placementTable td {
+  border: 1px solid rgb(221, 221, 221);
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: black;
+}
+td:first-child {
+  font-weight: bold;
+}
+.resizeImgDiv img{
+  max-width: 31px;
+}
+.resizeImgDivSecond img{
+  max-width: 23px;
+}
+.resizeImgDivThird img{
+  max-width: 40px;
+}
+/* Top College end */
+
+
+/* Top courses start*/
+.examsList h4{
+  color: #4d586c;
+  font-size: 18px;
+  font-weight: 700;
+}
+.alignItemCenter{
+  align-items: center;
+  display: flex;
+
+}
+.widthFull{
+  width: 100%;
+}
+.examDuration span{
+  font-size: 11.6px;
+    color: #7e8995;
+    font-weight: 700;
+}
+.examDuration h5{
+  color: #5a88bb;
+  font-size: 14px;
+}
+.examDuration{
+  width: 50%;
+  justify-content: end;
+  gap: 5%;
+}
+.mainsDetailsPara{
+  color: #666;
+  font-style: italic;
+  font-size: 14px;
+  margin-right: 5%;
+  /* border-bottom: 1px solid rgb(232, 232, 232);
+  padding-bottom: 10px; */
+}
+.ExamApplyNow{
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 88.9px;
+  border: 1px solid #d6d6d6;
+  padding: 6px 17px;
+  display: block;
+  margin-bottom: 5px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #ff7900;
+  color: #fff;
+}
+.ExamApplyNow:hover{
+  color: #80899a;
+  background: #fff;
+  border: 1px solid #d6d6d6;
+}
+.gapContainer{
+  display: flex;
+  justify-content: space-between;
+}
+.examImageDiv img{
+  max-width: 50px;
+}
+.examImageDiv{
+  width: 40%;
+  gap: 4%;
+}
+/* Top courses end */
+
+/* palacement start */
+.sliderCaption p .fa-location-dot{
+  font-size: 18px;
+  margin-right: 2%;
+}
+
+
+.my-slider{
+  padding: 0 50px;
+}
+.slick-initialized .slick-slide{
+  /* background-color: #b32532; */
+  color: #FFF;
+  height: 250px;
+  margin: 0 15px 0 0;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  /* width: 300px !important; */
+}
+
+
+
+.slick-next, .slick-prev{
+  z-index: 5;
+}
+.slick-next{
+  right: 15px;
+}
+.slick-prev{
+  left: 15px;
+}
+.slick-next:before, .slick-prev:before{
+  color: #000;
+  font-size: 26px;
+}
+.sliderParentDIv{
+  border: 1px solid #d8d8d8;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: start !important;
+  /* width: 270px !important; */
+}
+
+.collegeCarousel{
+  margin-bottom: 7%;
+}
+.sliderParentDIv h6{
+  color: black;
+  font-weight: 600;
+  text-align: start;
+  font-size: 16px;
+}
+.sliderParentDIv p{
+  color:gray;
+  margin-top: 5%;
+  font-size: 18%;
+}
+.sliderParentDIv span{
+  font-weight: 800;
+  font-size: 14px;
+}
+.sliderParentDIv img{
+  width: inherit;
+}
+.sliderCaption{
+  margin-top: 7%;
+  padding-left: 15px;
+}
+/* palacement end */
+
+/* footer start */
+
+.footerDiv{
+background-color: #f4f4f4;
+}
+.copyright p{
+  color: rgb(102, 102, 102);
+  font-size: 15px;
+  font-weight: 700;
+}
+footer{
+  padding: 3% 0;
+  margin-top: 2%;
+}
+.socialIcons .fa-brands{
+font-size: large;
+margin-right: 5px;
+cursor: pointer ;
+}
+.socialIcons .fa-brands:hover{
+  color: gray;
+}
+.socialIcons a{
+  color:black
+}
+.socialIcons a:hover {
+  color:gray
+}
+.copyright a{
+  color: black;
+  text-decoration: none;
+}
+/* footer end */
+
+/* media query */
+
+@media only screen and (max-width: 1000px) {
+  #formParentDiv{
+    width: 100%;
+  }
+  .examImageDiv{
+    width: 100%;
+  }
+  .flexDiv {
+    flex-direction: column;
+  }
+  .examDuration {
+    width: 100%;
+    flex-direction: column;
+    align-items: start;;
+  }
+  .responsiveMarginBottom{
+    margin-top: 2%;
+    width: 100%;
+  }
+  .gapContainer{
+    flex-direction: column;
+      align-items: start;
+  }
+  .bannerAlignCenter h1 {
+    font-size: 30px;
+    margin-bottom: 2%;
+  }
+  .headerButton{
+      width: 50%;
+      text-align: end;
+  }
+}
+@media only screen and (max-width: 750px){
+.responsiveNone{
+  display: none;
+}
+.headerLogo img{
+  max-width: 100px;
+}
+}
+
+
+@media only screen and (max-width: 450px){
+  .bannerAlignCenter h1 {
+    font-size: 22px;
+    margin-bottom: 2%;
+  }
+  .sectionTitle{
+    margin-top: 7%;
+    margin-bottom: 5%;
+  }
+  .collegeTitle{
+    flex-direction: column;
+    align-items: start;
+  }
+  .collegeTitle h3{
+    margin-top: 3%;
+  }
+  option,select,input, #submit{
+    font-size: 15px;
+  }
+  /* .headerFlex{
+   flex-direction: column;
+  } */
+
+}
+
+@media only screen and (max-width: 350px) {
+  .collegelist {
+    width: 100%;
+  }
+  .bannerAlignCenter h1 {
+    font-size: 19px;
+    margin-bottom: 2%;
+  }
+}

@@ -1,0 +1,404 @@
+<style>
+  .calculator__form--top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 30px;
+  }
+
+  .calculator__form--top h6 {
+      display: inline-block;
+      color: #fff;
+      font-family: "Borna", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 26px;
+      border-radius: 8px;
+      padding: 5px 16px 5px;
+      background: #1E1E1E;
+      margin-top: 2px;
+  }
+
+  .calculator__form--title {
+      display: inline-block;
+      color: #1E1E1E;
+      font-family: "Borna", sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 31px;
+      margin-top: 18px;
+  }
+
+  .form-section .potential-customers-label {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+      color: #1E1E1E;
+      font-family: "Borna", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 26px;
+      margin-bottom: 11px;
+  }
+
+  .calculator__form--count {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      padding: 8px;
+      background: #FFE6DE;
+      color: #1E1E1E;
+      font-family: "Borna", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 26px;
+      width: 50px;
+      height: 27px;
+  }
+
+  .calculator__form .dynamic-input {
+      border-radius: 8px;
+      border: 1px solid #1E1E1E;
+      color: #1E1E1E;
+      font-family: "Borna", sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      padding: 24.5px 23px 24.5px !important;
+      height: 51px !important;
+  }
+
+  .calculator__form .dynamic-input-percent:before {
+      position: absolute;
+      z-index: 1000;
+      content: '%';
+      color: #1E1E1E;
+      font-family: "Borna", sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      right: 23px;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  .calculator__form .dynamic-input-percent {
+      position: relative;
+      z-index: 100;
+  }
+
+  .calculator .potential-customers-label {
+      margin-bottom: 10px;
+      gap: 12px;
+  }
+
+  .calculator__form-result {
+      display: flex;
+      flex-direction: column;
+      padding: 42px 40px 41px 40px;
+      border-radius: 8px;
+      background: #FFE6DE;
+  }
+
+  .calculator__form-result--top {
+      display: flex;
+      flex-direction: row;
+      gap: 19px;
+  }
+
+  .calculator__form-result--title {
+      display: inline-block;
+      font-family: "Borna", sans-serif;
+      color: #1E1E1E;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 31px;
+      margin: 0;
+  }
+
+  .calculator__form-result--svg {
+      height: 30px !important;
+      width: 127px !important;
+  }
+
+  .calculator__form-result--title-mob {
+      display: none;
+  }
+
+  .calculator__form-result--bottom {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      margin-top: 20px;
+  }
+
+  .calculator__form-result--new {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .calculator__form-result--revenue {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .calculator__form-result .results-customers-label {
+      font-family: "Borna", sans-serif;
+      color: #1E1E1E;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 25px;
+      margin-bottom: 8px;
+      display: inline-block;
+  }
+
+
+  .calculator__form-result .results-customers-input {
+      height: 47px !important;
+      text-align: center !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      border-radius: 8px;
+      background: #FF785A;
+      font-family: "Borna", sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 31px;
+      color: #1E1E1E;
+      border: none !important;
+  }
+
+  [for="conversionRate"], [for="averageValue"] {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2%;
+      gap: 2%;
+      font-weight: 600;
+  }
+
+  .calculatorFormRoi {
+      background-color: #fff;
+      border: 7px solid #787878;
+  padding: 20px 25px;
+  border-radius: 15px;
+  border-top: 0;
+  border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  max-width: 60%;
+  margin: auto;
+  }
+
+  input , #potentialCustomers{
+      width: 100%;
+      padding: 4px 7px;
+      padding: 15px 10px;
+    border-radius: 7px;
+  }
+  .form-section{
+      margin-bottom: 4%;
+  }
+  @media only screen and (max-width: 750px) {
+      [for="conversionRate"], [for="averageValue"], .calculator__form-result .results-customers-input, .calculator__form--top,
+      .calculator__form-result--top, .calculator__form-result--bottom{
+          flex-direction: column !important;
+      }
+      .calculator__form--top{
+          display: block;
+      }
+      .calculatorFormRoi{
+          max-width: 100% !important;
+      }
+}
+
+</style>
+
+<div class="calculatorFormRoi">
+<!-- 
+  <div class="calculator__form--top">
+      <div>
+          <svg width="170" height="40" viewBox="0 0 170 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                  d="M55.8527 23.7892L65.2886 12.565V8.97266H49.7146V13.091H59.1242L49.7146 24.2416V27.8707H65.3254V23.7892H55.8527Z"
+                  fill="#1E1E1E"></path>
+              <path
+                  d="M83.7449 12.5442C83.1137 11.2187 82.1617 10.2194 80.8889 9.54089C79.616 8.86239 78.0328 8.52051 76.1446 8.52051C74.5562 8.52051 73.215 8.76771 72.1209 9.25687C71.0269 9.74602 70.138 10.3772 69.4543 11.1451C68.7758 11.913 68.2551 12.702 67.9027 13.5067L72.4365 15.0583C72.8626 14.3272 73.3833 13.796 73.9881 13.4699C74.593 13.1438 75.2715 12.9807 76.0289 12.9807C76.8862 12.9807 77.57 13.1911 78.0907 13.6066C78.6061 14.0222 78.9901 14.627 79.2426 15.4212C79.3425 15.7368 79.4161 16.0892 79.4793 16.4627H75.1611C72.7153 16.4627 70.8218 16.9728 69.4701 17.9932C68.1236 19.0136 67.4451 20.5337 67.4451 22.5481C67.4451 24.389 68.071 25.8144 69.3175 26.819C70.5641 27.8289 72.3208 28.3338 74.593 28.3338C76.8652 28.3338 78.4536 27.6132 79.453 26.1773C79.5424 26.0458 79.6265 25.9038 79.7054 25.7671L79.8106 27.8815H84.5338L84.6495 17.4094C84.6758 15.4949 84.3708 13.8749 83.7396 12.5494L83.7449 12.5442ZM79.0743 22.0695C78.7061 22.6849 78.2117 23.1898 77.5805 23.5843C76.9493 23.9735 76.234 24.1681 75.424 24.1681C74.5194 24.1681 73.8093 24.0103 73.3096 23.6947C72.8047 23.3792 72.5522 22.9426 72.5522 22.3903C72.5522 21.6855 72.8678 21.1385 73.499 20.744C74.1301 20.3548 75.261 20.1602 76.902 20.1602H79.6213C79.6213 20.8177 79.4372 21.4541 79.0743 22.0695Z"
+                  fill="#1E1E1E"></path>
+              <path
+                  d="M105.357 13.149C104.652 11.6763 103.663 10.535 102.39 9.73024C101.118 8.9255 99.6134 8.52051 97.8724 8.52051C96.284 8.52051 94.9428 8.9255 93.8487 9.73024C93.165 10.2352 92.5812 10.8716 92.0973 11.6342L91.8658 8.97284H87.1794V34.3824H92.1709V25.3095C92.639 26.03 93.2018 26.6349 93.854 27.1135C94.948 27.9183 96.2945 28.3233 97.8777 28.3233C99.6186 28.3233 101.123 27.9183 102.396 27.1135C103.669 26.3088 104.657 25.1622 105.362 23.6737C106.067 22.1852 106.419 20.4337 106.419 18.4193C106.419 16.4048 106.067 14.6218 105.362 13.1438L105.357 13.149ZM100.634 21.1806C100.229 21.9853 99.6817 22.6165 98.9875 23.0688C98.2932 23.5212 97.4937 23.7473 96.589 23.7473C95.7317 23.7473 94.9691 23.5212 94.3011 23.0688C93.6331 22.6165 93.1124 21.9853 92.7337 21.1806C92.355 20.3759 92.1656 19.4554 92.1656 18.4193C92.1656 17.3831 92.355 16.4732 92.7337 15.679C93.1124 14.8847 93.6436 14.2588 94.3221 13.8065C95.0006 13.3542 95.7738 13.128 96.6259 13.128C97.5358 13.128 98.3353 13.3542 99.0243 13.8065C99.7186 14.2588 100.26 14.8847 100.65 15.679C101.039 16.4732 101.233 17.3884 101.233 18.4193C101.233 19.4502 101.033 20.3706 100.628 21.1806H100.634Z"
+                  fill="#1E1E1E"></path>
+              <path
+                  d="M126.653 13.149C125.949 11.6763 124.96 10.535 123.687 9.73024C122.414 8.9255 120.91 8.52051 119.169 8.52051C117.58 8.52051 116.239 8.9255 115.145 9.73024C114.461 10.2352 113.878 10.8716 113.394 11.6342L113.162 8.97284H108.476V34.3824H113.467V25.3095C113.935 26.03 114.498 26.6349 115.15 27.1135C116.244 27.9183 117.591 28.3233 119.174 28.3233C120.915 28.3233 122.419 27.9183 123.692 27.1135C124.965 26.3088 125.954 25.1622 126.659 23.6737C127.363 22.1852 127.716 20.4337 127.716 18.4193C127.716 16.4048 127.363 14.6218 126.659 13.1438L126.653 13.149ZM121.93 21.1806C121.525 21.9853 120.978 22.6165 120.284 23.0688C119.59 23.5212 118.79 23.7473 117.885 23.7473C117.028 23.7473 116.265 23.5212 115.597 23.0688C114.929 22.6165 114.409 21.9853 114.03 21.1806C113.651 20.3759 113.462 19.4554 113.462 18.4193C113.462 17.3831 113.651 16.4732 114.03 15.679C114.409 14.8847 114.935 14.2588 115.619 13.8065C116.297 13.3542 117.065 13.128 117.922 13.128C118.827 13.128 119.632 13.3542 120.321 13.8065C121.015 14.2588 121.557 14.8847 121.946 15.679C122.335 16.4732 122.53 17.3884 122.53 18.4193C122.53 19.4502 122.33 20.3706 121.925 21.1806H121.93Z"
+                  fill="#1E1E1E"></path>
+              <path
+                  d="M141.896 23.0741C141.281 23.5054 140.476 23.7158 139.498 23.7158C138.588 23.7158 137.757 23.5212 137.005 23.1319C136.247 22.7427 135.642 22.1694 135.19 21.412C134.906 20.9334 134.717 20.3759 134.611 19.75H148.455C148.455 17.3568 148.024 15.3213 147.172 13.6435C146.314 11.9656 145.189 10.6928 143.79 9.82491C142.39 8.95706 140.87 8.52051 139.235 8.52051C137.32 8.52051 135.627 8.94128 134.149 9.78809C132.676 10.6349 131.513 11.7973 130.672 13.2858C129.825 14.7743 129.404 16.4889 129.404 18.4245C129.404 20.3601 129.815 22.08 130.635 23.5632C131.456 25.0517 132.581 26.2141 134.017 27.0609C135.453 27.9025 137.105 28.3285 138.972 28.3285C140.46 28.3285 141.78 28.1287 142.943 27.7237C144.1 27.3187 145.104 26.7348 145.946 25.9669C146.788 25.199 147.477 24.2838 148.008 23.2266L143.321 21.412C142.995 22.0905 142.522 22.6481 141.901 23.0741H141.896ZM136.547 13.5488C137.225 13.1438 138.062 12.9439 139.04 12.9439C139.924 12.9439 140.692 13.1648 141.344 13.6066C142.001 14.0484 142.511 14.7638 142.874 15.7631C142.885 15.7947 142.895 15.8262 142.906 15.8578H134.853C134.901 15.6947 134.953 15.5317 135.011 15.3844C135.353 14.5639 135.863 13.9538 136.542 13.5488H136.547Z"
+                  fill="#1E1E1E"></path>
+              <path
+                  d="M164.423 2.46167V11.4715C163.961 10.7773 163.414 10.1934 162.777 9.72531C161.683 8.92058 160.337 8.51558 158.753 8.51558C157.012 8.51558 155.508 8.92058 154.235 9.72531C152.962 10.53 151.974 11.6714 151.269 13.1441C150.564 14.6168 150.212 16.3788 150.212 18.4196C150.212 20.4604 150.564 22.1855 151.269 23.674C151.974 25.1625 152.962 26.3091 154.235 27.1139C155.508 27.9186 157.012 28.3236 158.753 28.3236C160.342 28.3236 161.683 27.9186 162.777 27.1139C163.445 26.6247 164.013 26.0041 164.492 25.2625L164.686 27.8713H169.41V2.46167H164.418H164.423ZM162.325 23.0692C161.657 23.5215 160.894 23.7477 160.037 23.7477C159.127 23.7477 158.327 23.5215 157.638 23.0692C156.944 22.6168 156.397 21.9857 155.992 21.1809C155.587 20.3762 155.387 19.4558 155.387 18.4196C155.387 17.3834 155.587 16.4682 155.992 15.6583C156.397 14.8535 156.939 14.2276 157.617 13.7858C158.296 13.344 159.09 13.1231 160 13.1231C160.91 13.1231 161.657 13.344 162.325 13.7858C162.993 14.2276 163.513 14.8483 163.892 15.6583C164.171 16.2579 164.35 16.9206 164.423 17.6464V19.1875C164.35 19.9133 164.176 20.5761 163.892 21.1757C163.513 21.9804 162.993 22.6116 162.325 23.0639V23.0692Z"
+                  fill="#1E1E1E"></path>
+              <path
+                  d="M28.4865 17.336L32.6522 0L4.1762 6.58514L0 23.9632L5.61736 22.664L1.45168 40L29.9277 33.4149L34.1039 16.0368L28.4865 17.336Z"
+                  fill="#FF785A"></path>
+          </svg>
+      </div>
+      <div>
+          <h6>
+              Find our your results now </h6>
+      </div>
+  </div> -->
+  <h4 class="calculator__form--title">
+      Leads Forecaster </h4>
+
+  <form id="conversionCalculator" data-hs-cf-bound="true">
+      <div class="form-section">
+          <label for="averageValue">
+              <span class="calculator__form--count">01</span>Average Client Value (Per Year): </label>
+          <div>
+              <input class="dynamic-input" type="text" id="averageValue" value="10,000" placeholder="10,000"
+                  oninput="formatNumber(this)">
+          </div>
+      </div>
+      <div class="form-section">
+          <label for="conversionRate">
+              <span class="calculator__form--count">02</span>Average Conversion Rate (Per Lead): </label>
+          <div class="dynamic-input-percent">
+              <input class="dynamic-input" type="number" id="conversionRate" value="70" placeholder="70"
+                  oninput="if (this.value.length === 1 &amp;&amp; this.value[0] === '0') { this.value = ''; } else { this.value = this.value.replace(/\D/g, ''); if (parseFloat(this.value) > 100) this.value = this.value.slice(0, -1); }">
+          </div>
+      </div>
+      <div class="form-section form-section-number">
+          <label class="potential-customers-label" for="potentialCustomers">
+              <span class="calculator__form--count">03</span>Number of Contacted Prospects: </label>
+          <select id="potentialCustomers" data-select2-id="select2-data-potentialCustomers" tabindex="-1"
+              class="select2-hidden-accessible" aria-hidden="true">
+              <option selected="" value="1000" data-select2-id="select2-data-2-9fk1">1,000</option>
+              <option value="5000">5,000</option>
+              <option value="10000">10,000</option>
+              <option value="20000">20,000</option>
+          </select><span class="select2 select2-container select2-container--default" dir="ltr"
+              data-select2-id="select2-data-1-126q" style="width: 510px;"><span class="selection"><span
+                      class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                      aria-expanded="false" tabindex="0" aria-disabled="false"
+                      aria-labelledby="select2-potentialCustomers-container"
+                      aria-controls="select2-potentialCustomers-container">
+                      <!-- <span class="select2-selection__rendered"
+                          id="select2-potentialCustomers-container" role="textbox" aria-readonly="true"
+                          title="1,000">1,000</span> -->
+                          <span class="select2-selection__arrow" role="presentation"><b
+                              role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                  aria-hidden="true"></span></span>
+      </div>
+      <div class="calculator__form-result">
+          <div class="calculator__form-result--top">
+              <div>
+                  <h4 class="calculator__form-result--title">
+                      Your Results with </h4>
+              </div>
+              <div>
+                  <svg class="calculator__form-result--svg" width="170" height="40" viewBox="0 0 170 40" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M55.8527 23.7892L65.2886 12.565V8.97266H49.7146V13.091H59.1242L49.7146 24.2416V27.8707H65.3254V23.7892H55.8527Z"
+                          fill="#1E1E1E"></path>
+                      <path
+                          d="M83.7449 12.5442C83.1137 11.2187 82.1617 10.2194 80.8889 9.54089C79.616 8.86239 78.0328 8.52051 76.1446 8.52051C74.5562 8.52051 73.215 8.76771 72.1209 9.25687C71.0269 9.74602 70.138 10.3772 69.4543 11.1451C68.7758 11.913 68.2551 12.702 67.9027 13.5067L72.4365 15.0583C72.8626 14.3272 73.3833 13.796 73.9881 13.4699C74.593 13.1438 75.2715 12.9807 76.0289 12.9807C76.8862 12.9807 77.57 13.1911 78.0907 13.6066C78.6061 14.0222 78.9901 14.627 79.2426 15.4212C79.3425 15.7368 79.4161 16.0892 79.4793 16.4627H75.1611C72.7153 16.4627 70.8218 16.9728 69.4701 17.9932C68.1236 19.0136 67.4451 20.5337 67.4451 22.5481C67.4451 24.389 68.071 25.8144 69.3175 26.819C70.5641 27.8289 72.3208 28.3338 74.593 28.3338C76.8652 28.3338 78.4536 27.6132 79.453 26.1773C79.5424 26.0458 79.6265 25.9038 79.7054 25.7671L79.8106 27.8815H84.5338L84.6495 17.4094C84.6758 15.4949 84.3708 13.8749 83.7396 12.5494L83.7449 12.5442ZM79.0743 22.0695C78.7061 22.6849 78.2117 23.1898 77.5805 23.5843C76.9493 23.9735 76.234 24.1681 75.424 24.1681C74.5194 24.1681 73.8093 24.0103 73.3096 23.6947C72.8047 23.3792 72.5522 22.9426 72.5522 22.3903C72.5522 21.6855 72.8678 21.1385 73.499 20.744C74.1301 20.3548 75.261 20.1602 76.902 20.1602H79.6213C79.6213 20.8177 79.4372 21.4541 79.0743 22.0695Z"
+                          fill="#1E1E1E"></path>
+                      <path
+                          d="M105.357 13.149C104.652 11.6763 103.663 10.535 102.39 9.73024C101.118 8.9255 99.6134 8.52051 97.8724 8.52051C96.284 8.52051 94.9428 8.9255 93.8487 9.73024C93.165 10.2352 92.5812 10.8716 92.0973 11.6342L91.8658 8.97284H87.1794V34.3824H92.1709V25.3095C92.639 26.03 93.2018 26.6349 93.854 27.1135C94.948 27.9183 96.2945 28.3233 97.8777 28.3233C99.6186 28.3233 101.123 27.9183 102.396 27.1135C103.669 26.3088 104.657 25.1622 105.362 23.6737C106.067 22.1852 106.419 20.4337 106.419 18.4193C106.419 16.4048 106.067 14.6218 105.362 13.1438L105.357 13.149ZM100.634 21.1806C100.229 21.9853 99.6817 22.6165 98.9875 23.0688C98.2932 23.5212 97.4937 23.7473 96.589 23.7473C95.7317 23.7473 94.9691 23.5212 94.3011 23.0688C93.6331 22.6165 93.1124 21.9853 92.7337 21.1806C92.355 20.3759 92.1656 19.4554 92.1656 18.4193C92.1656 17.3831 92.355 16.4732 92.7337 15.679C93.1124 14.8847 93.6436 14.2588 94.3221 13.8065C95.0006 13.3542 95.7738 13.128 96.6259 13.128C97.5358 13.128 98.3353 13.3542 99.0243 13.8065C99.7186 14.2588 100.26 14.8847 100.65 15.679C101.039 16.4732 101.233 17.3884 101.233 18.4193C101.233 19.4502 101.033 20.3706 100.628 21.1806H100.634Z"
+                          fill="#1E1E1E"></path>
+                      <path
+                          d="M126.653 13.149C125.949 11.6763 124.96 10.535 123.687 9.73024C122.414 8.9255 120.91 8.52051 119.169 8.52051C117.58 8.52051 116.239 8.9255 115.145 9.73024C114.461 10.2352 113.878 10.8716 113.394 11.6342L113.162 8.97284H108.476V34.3824H113.467V25.3095C113.935 26.03 114.498 26.6349 115.15 27.1135C116.244 27.9183 117.591 28.3233 119.174 28.3233C120.915 28.3233 122.419 27.9183 123.692 27.1135C124.965 26.3088 125.954 25.1622 126.659 23.6737C127.363 22.1852 127.716 20.4337 127.716 18.4193C127.716 16.4048 127.363 14.6218 126.659 13.1438L126.653 13.149ZM121.93 21.1806C121.525 21.9853 120.978 22.6165 120.284 23.0688C119.59 23.5212 118.79 23.7473 117.885 23.7473C117.028 23.7473 116.265 23.5212 115.597 23.0688C114.929 22.6165 114.409 21.9853 114.03 21.1806C113.651 20.3759 113.462 19.4554 113.462 18.4193C113.462 17.3831 113.651 16.4732 114.03 15.679C114.409 14.8847 114.935 14.2588 115.619 13.8065C116.297 13.3542 117.065 13.128 117.922 13.128C118.827 13.128 119.632 13.3542 120.321 13.8065C121.015 14.2588 121.557 14.8847 121.946 15.679C122.335 16.4732 122.53 17.3884 122.53 18.4193C122.53 19.4502 122.33 20.3706 121.925 21.1806H121.93Z"
+                          fill="#1E1E1E"></path>
+                      <path
+                          d="M141.896 23.0741C141.281 23.5054 140.476 23.7158 139.498 23.7158C138.588 23.7158 137.757 23.5212 137.005 23.1319C136.247 22.7427 135.642 22.1694 135.19 21.412C134.906 20.9334 134.717 20.3759 134.611 19.75H148.455C148.455 17.3568 148.024 15.3213 147.172 13.6435C146.314 11.9656 145.189 10.6928 143.79 9.82491C142.39 8.95706 140.87 8.52051 139.235 8.52051C137.32 8.52051 135.627 8.94128 134.149 9.78809C132.676 10.6349 131.513 11.7973 130.672 13.2858C129.825 14.7743 129.404 16.4889 129.404 18.4245C129.404 20.3601 129.815 22.08 130.635 23.5632C131.456 25.0517 132.581 26.2141 134.017 27.0609C135.453 27.9025 137.105 28.3285 138.972 28.3285C140.46 28.3285 141.78 28.1287 142.943 27.7237C144.1 27.3187 145.104 26.7348 145.946 25.9669C146.788 25.199 147.477 24.2838 148.008 23.2266L143.321 21.412C142.995 22.0905 142.522 22.6481 141.901 23.0741H141.896ZM136.547 13.5488C137.225 13.1438 138.062 12.9439 139.04 12.9439C139.924 12.9439 140.692 13.1648 141.344 13.6066C142.001 14.0484 142.511 14.7638 142.874 15.7631C142.885 15.7947 142.895 15.8262 142.906 15.8578H134.853C134.901 15.6947 134.953 15.5317 135.011 15.3844C135.353 14.5639 135.863 13.9538 136.542 13.5488H136.547Z"
+                          fill="#1E1E1E"></path>
+                      <path
+                          d="M164.423 2.46167V11.4715C163.961 10.7773 163.414 10.1934 162.777 9.72531C161.683 8.92058 160.337 8.51558 158.753 8.51558C157.012 8.51558 155.508 8.92058 154.235 9.72531C152.962 10.53 151.974 11.6714 151.269 13.1441C150.564 14.6168 150.212 16.3788 150.212 18.4196C150.212 20.4604 150.564 22.1855 151.269 23.674C151.974 25.1625 152.962 26.3091 154.235 27.1139C155.508 27.9186 157.012 28.3236 158.753 28.3236C160.342 28.3236 161.683 27.9186 162.777 27.1139C163.445 26.6247 164.013 26.0041 164.492 25.2625L164.686 27.8713H169.41V2.46167H164.418H164.423ZM162.325 23.0692C161.657 23.5215 160.894 23.7477 160.037 23.7477C159.127 23.7477 158.327 23.5215 157.638 23.0692C156.944 22.6168 156.397 21.9857 155.992 21.1809C155.587 20.3762 155.387 19.4558 155.387 18.4196C155.387 17.3834 155.587 16.4682 155.992 15.6583C156.397 14.8535 156.939 14.2276 157.617 13.7858C158.296 13.344 159.09 13.1231 160 13.1231C160.91 13.1231 161.657 13.344 162.325 13.7858C162.993 14.2276 163.513 14.8483 163.892 15.6583C164.171 16.2579 164.35 16.9206 164.423 17.6464V19.1875C164.35 19.9133 164.176 20.5761 163.892 21.1757C163.513 21.9804 162.993 22.6116 162.325 23.0639V23.0692Z"
+                          fill="#1E1E1E"></path>
+                      <path
+                          d="M28.4865 17.336L32.6522 0L4.1762 6.58514L0 23.9632L5.61736 22.664L1.45168 40L29.9277 33.4149L34.1039 16.0368L28.4865 17.336Z"
+                          fill="#FF785A"></path>
+                  </svg>
+              </div>
+              <div>
+                  <h4 class="calculator__form-result--title-mob">
+                      Your Results </h4>
+              </div>
+          </div>
+          <div class="calculator__form-result--bottom">
+              <div class="calculator__form-result--new">
+                  <label class="results-customers-label" for="newCustomers">
+                      New Clients: </label>
+                  <input class="results-customers-input" type="text" id="newCustomers" tabindex="-1" readonly="">
+              </div>
+              <div class="calculator__form-result--revenue">
+                  <label class="results-customers-label" for="additionalRevenue">
+                      Additional Revenue: </label>
+                  <input class="results-customers-input" type="text" id="additionalRevenue" tabindex="-1" readonly="">
+              </div>
+          </div>
+      </div>
+  </form>
+</div>
+
+<script>
+  function formatNumber(input) {
+      let value = input.value.replace(/[^0-9]/g, '');
+
+      if (value.length === 1 && value[0] === '0') {
+          value = '';
+      } else if (parseInt(value) > 100000000) {
+          value = value.slice(0, -1);
+      }
+
+      const parts = value.split(".");
+      let integerPart = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+      if (parts.length > 1) {
+          const decimalPart = parts[1];
+          value = integerPart + "." + decimalPart;
+      } else {
+          value = integerPart;
+      }
+
+      input.value = value;
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+      const percent = "0.018";
+      const potentialCustomersElement = document.getElementById("potentialCustomers");
+      const conversionRateElement = document.getElementById("conversionRate");
+      const averageValueElement = document.getElementById("averageValue");
+
+      function formatNumber(number) {
+          return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      }
+
+      function calculateConversion() {
+          const potentialCustomers = parseFloat(potentialCustomersElement.value);
+          const conversionRate = parseFloat(conversionRateElement.value) || 70;
+          const averageValue = parseFloat(averageValueElement.value.replace(/,/g, '') || 10000)
+
+          const newCustomers = (potentialCustomers * (conversionRate / 100) * percent);
+          const roundedNewCustomers = parseInt(newCustomers.toFixed(0));
+          const additionalRevenue = (roundedNewCustomers * averageValue).toFixed(0);
+
+
+          //             const roundedNewCustomers = Math.floor(newCustomers);
+
+          document.getElementById("newCustomers").value = formatNumber(roundedNewCustomers);
+          document.getElementById("additionalRevenue").value = formatNumber(additionalRevenue);
+      }
+
+      potentialCustomersElement.onchange = calculateConversion;
+      conversionRateElement.addEventListener("input", calculateConversion);
+      averageValueElement.addEventListener("input", calculateConversion);
+
+      calculateConversion();
+  });
+
+</script>

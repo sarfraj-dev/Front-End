@@ -1,0 +1,2643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Only Education</title>
+    <!-- favicon start -->
+    <link rel="icon" href="Assets/logo-3.ico" type="image/x-icon" />
+    <!-- favicon end -->
+
+    <!-- font awesome start -->
+    <script
+      src="https://kit.fontawesome.com/995abab88b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- font awesome end -->
+
+    <!-- slick slider jquery start-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"
+    />
+    <!-- slick slider jquery end -->
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--  header start -->
+    <!-- <section>
+      <div class="headerDivSpacing spacingDiv">
+        <div class="headerFlex headerMargin">
+          <div class="headerLogo">
+            <img src="Assets/logo.png" alt="" />
+          </div>
+          <div class="headerButton">
+            <a
+              href="https://onlyeducation.in/write-review.php"
+              target="_blank"
+              class="responsiveNone"
+              >Write a Review</a
+            >
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              >Enquire Now</a
+            >
+          </div>
+        </div>
+      </div>
+      <header></header>
+    </section> -->
+    <!--  header end -->
+
+    <!--  banner section start-->
+
+    <section>
+      <div class="bannerImg">
+        <div class="spacingDiv">
+          <div class="flexDiv bannerAlignCenter bannerTextTop">
+            <h1>Get Admission In Top Colleges In India & Abroad</h1>
+
+            <!-- form start -->
+            <div id="formParentDiv">
+              <form
+                action=""
+                method="post"
+                name="leadForm"
+                onsubmit="return validateForm()"
+                class="formContainer"
+              >
+                <h4 class="marginBottom">
+                  Fill in your details for a free counselling session
+                </h4>
+                <input
+                  type="text"
+                  name="Full Name"
+                  placeholder="Full Name"
+                  required
+                />
+                <input
+                  type="text"
+                  name="Mobile Number"
+                  placeholder="Number"
+                  required
+                  id="mobileNumber"
+                />
+                <p id="mobileError" style="color: red"></p>
+
+                <input
+                  type="email"
+                  name="Email Id"
+                  placeholder="Email"
+                  required
+                />
+                <input type="text" name="City" placeholder="City" required />
+                <select
+                  name="Stream"
+                  id="stream"
+                  class=""
+                  onchange="updateCourseOptions()"
+                >
+                  <!-- <select name="stream" id="" class=""> -->
+                  <option value="">Select Stream</option>
+                  <option value="undergraduation">undergraduation</option>
+                  <option value="post graduation">post graduation</option>
+                </select>
+
+                <select
+                  name="Sub Stream"
+                  id="apply_course"
+                  class="form-control"
+                >
+                  <option value="">Select Course</option>
+                  <option value="Medical">Medical</option>
+                  <option value="Engineering">Engineering</option>
+                  <option value="Pharmacy">Pharmacy</option>
+                  <option value="Law">Law</option>
+                  <option value="Management">Management</option>
+                  <option value="Others">Others</option>
+                </select>
+                
+                <p name="Date" id="currentDate"></p>
+
+
+                <input
+                  type="submit"
+                  name="submit"
+                  id="submit"
+                  value="I Want a Free Counselling Session"
+                />
+              </form>
+            </div>
+
+            <!-- form end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  banner section end-->
+
+    <!-- Top College Start -->
+    <section>
+      <div class="spacingDiv">
+        <h2 class="sectionTitle">Top Colleges</h2>
+        <div class="collegeListDiv flexDiv marginBottom">
+          <div class="collegelist boxPadding">
+            <div class="collegeTitle collegeHeading">
+              <img src="Assets/BITS_Pilani-Logo.svg.png" alt="" />
+              <h3>Birla Institute of Technology And Science, Pilani</h3>
+            </div>
+
+            <div class="collegeDegree flexDiv marginBottom">
+              <h4>Bachelor of Engineering [BE] {Hons.}</h4>
+              <p>
+                <span class="collegePrice">₹ 571,575</span>
+                <span class="collegePriceYear">1st Yr Fees</span>
+              </p>
+            </div>
+
+            <div class="collegeLabels marginBottom">
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/clock.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(62, 174, 141)"
+                  >4 Years</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-book-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 161, 0)"
+                  >Degree</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-campus-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 121, 121)"
+                  >On Campus</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-graduation-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #999"
+                  >Graduation</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-full-time-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #13a2e4"
+                  >Full Time</span
+                ></span
+              >
+            </div>
+
+            <div class="Specialization marginBottom">
+              <p>
+                <span>Specialization : </span>
+                <span>Computer Science Engineering</span>
+                <span
+                  ><span class="bar">|</span><span>Chemical Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Mechanical Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics & Instrumentation Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electrical & Electronics Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Civil Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Manufacturing Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics & Communication Engineering</span>
+                </span>
+              </p>
+            </div>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="applyNow"
+              >Apply Now</a
+            >
+
+            <button class="readMore" onclick="toggleReadMore(this)">
+              Read More
+            </button>
+            <div class="clickReadMore">
+              <p>
+                BITS Pilani is higher education and research university located
+                in Pilani, Rajasthan. Birla Institute of Technology has campuses
+                in Pilani, Goa, Hyderabad, and Dubai. With BITS Pilani in Dubai,
+                the institute has become the
+                <b> internationally deemed university.</b>
+                BITS Pilani also has been ranked among the top 20 Universities
+                in India as per NIRF 2023 Rankings. In NIRF 2023 Pharmacy
+                Rankings, BITS Pilani is among top 3 colleges in India.
+              </p>
+              <div class="collegeCourses">
+                <table class="courseTable">
+                  <tbody>
+                    <tr>
+                      <td><strong>Course</strong></td>
+                      <td><strong>Course Details</strong></td>
+                      <td><strong>BITS Pilani Fees&nbsp;</strong></td>
+                    </tr>
+                    <tr>
+                      <td>BE&nbsp;(Hons)</td>
+                      <td>
+                        <strong>Duration:</strong>&nbsp;4 Years&nbsp;<br />
+                        <strong>Eligibility:</strong>&nbsp;Passed 10+2 in PCM
+                        with 75% marks in aggregate overall and 60% in
+                        respective subjects&nbsp;<br />
+                        <strong>Selection Criteria:</strong>&nbspBITSAT
+                      </td>
+                      <td>₹5.72 Lakhs&nbsp;(1st Year Fees)</td>
+                    </tr>
+                    <tr>
+                      <td>BPharm</td>
+                      <td>
+                        <strong>Duration:</strong>&nbsp;4 Years&nbsp;<br />
+                        <strong>Eligibility:</strong>&nbsp;Passed 10+2 in
+                        science with a 75% marks in aggregate overall and 60% in
+                        respective subjects&nbsp;<br />
+                        <strong>Selection Criteria:</strong>&nbsp;BITSAT
+                      </td>
+                      <td>₹6.29 Lakhs&nbsp;(1st Year Fees)</td>
+                    </tr>
+                    <!-- <tr>
+                      <td>ME</td>
+                      <td>
+                        <strong>Duration:</strong>&nbsp;2 Years&nbsp;<br />
+                        <strong>Eligibility:</strong>&nbsp;Passed BE/ME/MPharm/
+                        MPhil with 60% marks&nbsp;<br />
+                        <strong>Selection Criteria:</strong>&nbsp;/&nbsp;GATE
+                      </td>
+                      <td>₹5.72 Lakhs&nbsp;(1st Year Fees)</td>
+                    </tr> -->
+                    <!-- <tr>
+                      <td>MBA</td>
+                      <td>
+                        <strong>Duration:</strong>&nbsp;2 Years&nbsp;<br />
+                        <strong>Eligibility:</strong>&nbsp;Passed BTech/ BE/
+                        BPharm/ BArch/ MCA/ MSc with 60% marks&nbsp;<br />
+                        <strong>Selection Criteria:</strong>&nbsp;BAAT
+                      </td>
+                      <td>₹5.72 Lakhs&nbsp;(1st Year Fees)</td>
+                    </tr> -->
+                    <!-- <tr>
+                      <td>MSc&nbsp;(Hons)</td>
+                      <td>
+                        <strong>Duration:</strong>&nbsp;2 Years&nbsp;<br />
+                        <strong>Eligibility:</strong>&nbsp;Passed 10+2 in
+                        science with a 75% marks in aggregate overall and 60% in
+                        respective subjects&nbsp;<br />
+                        <strong>Selection Criteria:</strong>&nbsp;BITSAT
+                      </td>
+                      <td>₹5.42 Lakhs&nbsp;(1st Year Fees)</td>
+                    </tr> -->
+                    <!-- <tr>
+                      <td>MPharm</td>
+                      <td>
+                        <strong>Duration:</strong>&nbsp;2 Years&nbsp;<br />
+                        <strong>Eligibility:</strong>&nbsp;Passed ME/ BPharm
+                        with a minimum of 60% marks in aggregate&nbsp;<br />
+                        <strong>Selection Criteria:</strong>&nbsp;BITS
+                        HD/&nbsp;GPAT / GATE
+                      </td>
+                      <td>₹5.72 Lakhs&nbsp;(1st Year Fees)</td>
+                    </tr> -->
+                    <!-- <tr>
+                      <td>PhD</td>
+                      <td>
+                        <strong>Duration:</strong>&nbsp;3-6 Years&nbsp;<br />
+                        <strong>Eligibility:</strong>&nbsp;Passed a master's/
+                        bachelor’s degree with 60% marks in aggregate&nbsp;<br />
+                        <strong>Selection Criteria:</strong>&nbsp;Written test
+                        conducted by the institute
+                      </td>
+                      <td>₹62,225 (1st Year Fees)</td>
+                    </tr> -->
+                  </tbody>
+                </table>
+              </div>
+              <div class="collegePlacement">
+                <h4 class="marginBottom">BITS Pilani Placements 2023</h4>
+                <p class="marginBottom">
+                  BITS Pilani Placements 2023 has been concluded. The highest
+                  salary increased by 35% & the average salary increased by
+                  31.5% as compared to the previous year
+                </p>
+
+                <table class="placementTable">
+                  <tbody>
+                    <tr>
+                      <th>Particulars</th>
+                      <th>Placements Statistics 2023</th>
+                    </tr>
+                    <tr>
+                      <td>Number of Companies Participated</td>
+                      <td>109</td>
+                    </tr>
+                    <tr>
+                      <td>Highest CTC</td>
+                      <td>INR 60.75 LPA</td>
+                    </tr>
+                    <tr>
+                      <td>Average CTC</td>
+                      <td>INR 30.37 LPA</td>
+                    </tr>
+                    <tr>
+                      <td>Median CTC</td>
+                      <td>INR 30 LPA</td>
+                    </tr>
+                    <tr>
+                      <td>Top Recruiters</td>
+                      <td>Google, Microsoft, Amazon, Visa, Adobe, Cisco</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- second item -->
+          <div class="collegelist boxPadding">
+            <div class="collegeTitle collegeHeading">
+              <img src="Assets/mukesh.png" alt="" />
+              <h3>
+                Mukesh Patel School of Technology Management & Engineering,
+                Mumbai
+              </h3>
+            </div>
+
+            <div class="collegeDegree flexDiv marginBottom">
+              <h4>Bachelor of Technology [B.Tech]</h4>
+              <p>
+                <span class="collegePrice">₹ 350,000</span>
+                <span class="collegePriceYear">1st Yr Fees</span>
+              </p>
+            </div>
+
+            <div class="collegeLabels marginBottom">
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/clock.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(62, 174, 141)"
+                  >4 Years</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-book-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 161, 0)"
+                  >Degree</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-campus-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 121, 121)"
+                  >On Campus</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-graduation-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #999"
+                  >Graduation</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-full-time-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #13a2e4"
+                  >Full Time</span
+                ></span
+              >
+            </div>
+
+            <div class="Specialization marginBottom">
+              <p>
+                <span>Specialization : </span>
+                <span>Civil Engineering</span>
+                <span
+                  ><span class="bar">|</span><span>Computer Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics & Telecommunication Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Mechanical Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Mechatronics</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Information Technology</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Cyber Security</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Data Sciences </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Computer Science and Business Systems </span>
+                </span>
+              </p>
+            </div>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="applyNow"
+              >Apply Now</a
+            >
+
+            <button class="readMore" onclick="toggleReadMore(this)">
+              Read More
+            </button>
+            <div class="clickReadMore">
+              <p>
+                Mukesh Patel School of Technology Management and Engineering
+                (MPSTME) is a private Institute located in Mumbai, Maharashtra
+                and was established in the year 2006.The institute garnered the
+                Educational Leadership Award by ET Business Leader of the Year
+                2020. MPSTME students have the chance to study a part of their
+                program at NMIMS and then go and complete rest of the course at
+                a partner university abroad.
+              </p>
+              <div class="collegeCourses">
+                <table class="courseTable">
+                  <tbody>
+                    <tr>
+                      <td><strong>Course</strong></td>
+                      <td><strong>Eligibility</strong></td>
+                      <td><strong>Fees/ year&nbsp;</strong></td>
+                    </tr>
+                    <tr>
+                      <td>B.Tech</td>
+                      <td>10+2 with 45% + NMIMS CET</td>
+                      <td>₹3.5 Lakhs (1st Year Fees)</td>
+                    </tr>
+                    <tr>
+                      <td>B.Tech + MBA</td>
+                      <td>10+2 with 45% + NMIMS CET</td>
+                      <td>₹5.02 Lakhs (1st Year Fees)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="collegePlacement">
+                <h4 class="marginBottom">MPSTME Placements</h4>
+                <p class="marginBottom">
+                  MPSTME has corporate partnerships with over 300 companies that
+                  regularly conduct campus recruitment for Final Placements and
+                  Summer Internships. MPSTME provides full placement support to
+                  its students in the fields of Management and Engineering.
+                </p>
+
+                <table class="placementTable">
+                  <tbody>
+                    <tr>
+                      <th>Placement Package</th>
+                      <th>Placement Statistics 2022</th>
+                    </tr>
+                    <tr>
+                      <td>Highest Package</td>
+                      <td>
+                        INR 1.22 CPR (International) INR 40.43 LPA (Domestic)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Average Package</td>
+                      <td>INR 8.05 LPA</td>
+                    </tr>
+                    <tr>
+                      <td>Top Recruiters</td>
+                      <td>
+                        Daikin Belgium, Rakuten, Accenture, Blue Star, KPMG,
+                        Mahindra Logistics, JustDial, Reliance Industries
+                        Limited, Morgan Stanley, PayPal, Google
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- second end -->
+        </div>
+
+        <!-- second flex div -->
+        <div class="collegeListDiv flexDiv marginBottom">
+          <div class="collegelist boxPadding">
+            <div class="collegeTitle collegeHeading">
+              <img
+                src="Assets/Vellore_Institute_of_Technology_seal_2017.svg.png"
+                alt=""
+              />
+              <h3>Vellore Institute of Technology, Vellore</h3>
+            </div>
+
+            <div class="collegeDegree flexDiv marginBottom">
+              <h4>Bachelor of Technology [B.Tech]</h4>
+              <p>
+                <span class="collegePrice">₹ 198,000</span>
+                <span class="collegePriceYear">1st Yr Fees</span>
+              </p>
+            </div>
+
+            <div class="collegeLabels marginBottom">
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/clock.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(62, 174, 141)"
+                  >4 Years</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-book-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 161, 0)"
+                  >Degree</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-campus-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 121, 121)"
+                  >On Campus</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-graduation-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #999"
+                  >Graduation</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-full-time-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #13a2e4"
+                  >Full Time</span
+                ></span
+              >
+            </div>
+
+            <div class="Specialization marginBottom">
+              <p>
+                <span>Specialization : </span>
+                <span>Computer Science Engineering</span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Computer Science and Business Systems</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Biotechnology</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electrical And Electronics Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Data Sciences</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics & Communication Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Mechanical Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Biomedical Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Information Technology</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Civil Engineering</span>
+                </span>
+              </p>
+            </div>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="applyNow"
+              >Apply Now</a
+            >
+
+            <button class="readMore" onclick="toggleReadMore(this)">
+              Read More
+            </button>
+            <div class="clickReadMore">
+              <p>
+                Vellore Institute of Technology (VIT) is approved by the
+                University Grants Commission (UGC). It is a private deemed
+                university in Katpadi, Tamil Nadu, India. According to the
+                Indian government, the institute is regarded as an Institution
+                of Eminence and the top private institution for innovation.
+              </p>
+              <div class="collegeCourses">
+                <table class="courseTable">
+                  <tbody>
+                    <tr>
+                      <td><strong>Course</strong></td>
+                      <td><strong>Course Details</strong></td>
+                      <td><strong>Fees (1st year)</strong></td>
+                    </tr>
+                    <tr>
+                      <td style="width: 296px">
+                        <strong>B.Tech</strong>
+                      </td>
+                      <td style="width: 598px">
+                        10+2 examination in PCM/B with a minimum of 60%
+                        aggregate marks + Valid Score in VITEEE
+                      </td>
+                      <td style="width: 175px">INR 1,98,000</td>
+                    </tr>
+
+                    <tr>
+                      <td style="width: 296px">
+                        <strong>BCA</strong>
+                      </td>
+                      <td style="width: 598px">
+                        10+2 with Mathematics as the main subject with at least
+                        70% marks in aggregate
+                      </td>
+                      <td style="width: 175px">INR 57,000</td>
+                    </tr>
+
+                    <tr>
+                      <td style="width: 296px">
+                        <strong>B.Arch</strong>
+                      </td>
+                      <td style="width: 598px">
+                        10+2 examination with Mathematics as a subject and with
+                        a minimum of 60% aggregate marks + valid score in NATA
+                      </td>
+                      <td style="width: 175px">INR 2,88,000</td>
+                    </tr>
+                    <tr>
+                      <td style="width: 296px">
+                        <strong>B.Des</strong>
+                      </td>
+                      <td style="width: 598px">
+                        10+2 with a minimum of 60% aggregate marks + Valid Score
+                        in VITEEE/ UCEED
+                      </td>
+                      <td style="width: 175px">INR 1,76,000</td>
+                    </tr>
+
+                    <!-- <tr>
+                      <td style="width: 296px">
+                        <strong>BBA</strong>
+                      </td>
+                      <td style="width: 598px">
+                        10+2 with Mathematics/ Accountancy or Commerce as one of
+                        the main subjects with a minimum of 70% aggregate marks
+                      </td>
+                      <td style="width: 175px">INR 57,000</td>
+                    </tr> -->
+
+                    <!-- <tr>
+                      <td style="width: 296px">
+                        <strong>B.Com</strong>
+                      </td>
+                      <td style="width: 598px">
+                        10+2 with Mathematics/ Accountancy or Commerce as one of
+                        the main subjects with a minimum of 70% aggregate marks
+                      </td>
+                      <td style="width: 175px">INR 57,000</td>
+                    </tr> -->
+                    <tr>
+                      <td colspan="1" rowspan="3" style="width: 296px">
+                        <strong>B.Sc</strong>
+                      </td>
+                      <td style="width: 598px">
+                        10+2 OR Diploma with a minimum of 70% aggregate marks
+                      </td>
+                      <td colspan="1" rowspan="3" style="width: 175px">
+                        INR 99,000
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="width: 598px">10+2 OR Diploma</td>
+                    </tr>
+                    <tr>
+                      <td style="width: 598px">
+                        10+2 with 60% marks in PCMB/ PCM/ PCB or Agriculture
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="collegePlacement">
+                <h4 class="marginBottom">VIT Vellore Placements 2023</h4>
+                <p class="marginBottom">
+                  VIT Vellore Placement Drive 2023 has been concluded. During
+                  VIT Vellore Placements 2023, a total of 904 recruiters visited
+                  the campus, 14,345 students were placed, 4461 super dreams and
+                  & 3453 dream offers were made.
+                </p>
+
+                <table class="placementTable">
+                  <tbody>
+                    <tr>
+                      <th>Particulars</th>
+                      <th>Placements Statistics 2023</th>
+                    </tr>
+                    <tr>
+                      <td>Number of Companies Participated</td>
+                      <td>904</td>
+                    </tr>
+                    <tr>
+                      <td>Number of Students Placed</td>
+                      <td>14,345</td>
+                    </tr>
+                    <tr>
+                      <td>Number of Super Dream Offers</td>
+                      <td>4461</td>
+                    </tr>
+                    <tr>
+                      <td>Number of Dream Offers</td>
+                      <td>3453</td>
+                    </tr>
+                    <tr>
+                      <td>Number of Regular Offers</td>
+                      <td>6431</td>
+                    </tr>
+                    <tr>
+                      <td>Highest Package</td>
+                      <td>INR 1.02 CPA</td>
+                    </tr>
+
+                    <tr>
+                      <td>Average Salary</td>
+                      <td>INR 9.23 LPA</td>
+                    </tr>
+                    <tr>
+                      <td>Top Recruiters</td>
+                      <td>TCS, Microsoft, Airbnb, Qualcomm etc</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- second item -->
+          <div class="collegelist boxPadding">
+            <div class="collegeTitle collegeHeading">
+              <img src="Assets/noida.png" alt="" />
+              <h3>Shiv Nadar University, Noida</h3>
+            </div>
+
+            <div class="collegeDegree flexDiv marginBottom">
+              <h4>Bachelor of Technology [B.Tech]</h4>
+              <p>
+                <span class="collegePrice">₹ 400,000</span>
+                <span class="collegePriceYear">1st Yr Fees</span>
+              </p>
+            </div>
+
+            <div class="collegeLabels marginBottom">
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/clock.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(62, 174, 141)"
+                  >4 Years</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-book-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 161, 0)"
+                  >Degree</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-campus-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 121, 121)"
+                  >On Campus</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-graduation-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #999"
+                  >Graduation</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-full-time-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #13a2e4"
+                  >Full Time</span
+                ></span
+              >
+            </div>
+
+            <div class="Specialization marginBottom">
+              <p>
+                <span>Specialization : </span>
+                <span>Computer Science and Engineering </span>
+                <span
+                  ><span class="bar">|</span><span>Chemical Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Mechanical Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Civil Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electrical And Computer Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics & Communication Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Industrial & Production Engineering </span>
+                </span>
+              </p>
+            </div>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="applyNow"
+              >Apply Now</a
+            >
+
+            <button class="readMore" onclick="toggleReadMore(this)">
+              Read More
+            </button>
+            <div class="clickReadMore">
+              <p>
+                Shiv Nadar University, also known as SNU Noida is a private
+                university established under Shiv Nadar Foundation. According to
+                NIRF 2023, SNU is ranked 62 among universities and ranked 95
+                overall in India. Founded in 2011, the university is well-known
+                for its B.Tech, M.Tech, MBA and M.Sc programs.
+              </p>
+              <div class="collegeCourses">
+                <table class="courseTable">
+                  <tbody>
+                    <tr>
+                      <td><strong>Course</strong></td>
+                      <td><strong>Eligibility</strong></td>
+                      <td><strong>Fees</strong></td>
+                    </tr>
+                    <tr>
+                      <td>B.Tech</td>
+                      <td>
+                        <strong> Duration</strong>: 4 years <br />
+                        <strong> Eligibility </strong>: 10+2 with Mathematics,
+                        Chemistry, and Physics as compulsory subjects. <br />
+                        <strong> Selection Criteria </strong>: Marks obtained in
+                        JEE Mains Examination or SAT or SNUSAT & APT
+                      </td>
+                      <td>₹4 Lakhs (1st Year Fees)</td>
+                    </tr>
+                    <tr>
+                      <td>BMS</td>
+                      <td>
+                        <strong> Duration </strong>: 3 years <br />
+                        <strong> Eligibility </strong>: Must have passed Higher
+                        Secondary Examination with English as a compulsory
+                        subject. <br />
+                        <strong> Selection Criteria </strong>: Marks obtained in
+                        SAT
+                      </td>
+                      <td>₹4.5 Lakhs (1st Year Fees)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="collegePlacement">
+                <h4 class="marginBottom">SNU Noida Placements</h4>
+                <p class="marginBottom">
+                  Shiv Nadar University has a Career Development Centre (CDC) to
+                  facilitate all the placement-related activities, such as
+                  placement drives and pre-placement talks.
+                </p>
+
+                <table class="placementTable">
+                  <tbody>
+                    <tr>
+                      <th>Particulars</th>
+                      <th>Placement Statistics 2021</th>
+                    </tr>
+                    <tr>
+                      <td>Highest CTC</td>
+                      <td>INR 24 LPA</td>
+                    </tr>
+                    <tr>
+                      <td>Average CTC</td>
+                      <td>INR 51 LPAINR 7.82 LPA</td>
+                    </tr>
+                    <tr>
+                      <td>Top Recruiters</td>
+                      <td>
+                        Cognizant, Adobe, Dell, Deloitte, Goldman Sachs, Larsen
+                        & Toubro, Tata Consultancy Services, Bosch, etc
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- second end -->
+        </div>
+
+        <!-- flex div end -->
+
+        <!-- third flex div -->
+        <div class="collegeListDiv flexDiv marginBottom">
+          <div class="collegelist boxPadding">
+            <div class="collegeTitle collegeHeading resizeImgDiv">
+              <img src="Assets/Amity_University_logo.png" alt="" />
+              <h3>Amity University, Noida</h3>
+            </div>
+
+            <div class="collegeDegree flexDiv marginBottom">
+              <h4>Bachelor of Technology [B.Tech]</h4>
+              <p>
+                <span class="collegePrice">₹ 347,000</span>
+                <span class="collegePriceYear">1st Yr Fees</span>
+              </p>
+            </div>
+
+            <div class="collegeLabels marginBottom">
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/clock.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(62, 174, 141)"
+                  >4 Years</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-book-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 161, 0)"
+                  >Degree</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-campus-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 121, 121)"
+                  >On Campus</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-graduation-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #999"
+                  >Graduation</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-full-time-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #13a2e4"
+                  >Full Time</span
+                ></span
+              >
+            </div>
+
+            <div class="Specialization marginBottom">
+              <p>
+                <span>Specialization : </span>
+                <span>Computer Science Engineering</span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Nuclear Science and Technology</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics & Communication Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electrical And Electronics Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Aeronautical Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Civil Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Aerospace Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Biotechnology</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Mechanical Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electrical And Electronics Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics And Instrumentation Engineering</span>
+                </span>
+              </p>
+            </div>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="applyNow"
+              >Apply Now</a
+            >
+
+            <button class="readMore" onclick="toggleReadMore(this)">
+              Read More
+            </button>
+            <div class="clickReadMore">
+              <p>
+                Amity University is a private institute that offers higher
+                education through its 9 national and 13 international
+                campuses.The institute is approved by AICTE and
+                <b>accredited by NAAC with an A+ grade</b>. Amity Noida has been
+                ranked 35th among the top universities in India under NIRF
+                Rankings 2023.
+              </p>
+              <div class="collegeCourses">
+                <table class="courseTable">
+                  <tbody>
+                    <tr>
+                      <td><strong>Course</strong></td>
+                      <td><strong>Course Details</strong></td>
+                      <td><strong>Fees</strong></td>
+                    </tr>
+                    <tr>
+                      <td style="width: 296px">
+                        <strong>BJMC</strong>
+                      </td>
+                      <td style="width: 598px"></td>
+                      <td style="width: 175px">INR 1,00,000 Per Semester</td>
+                    </tr>
+                    <!-- <tr>
+                      <td style="width: 296px">
+                        <strong>B.Com </strong>
+                      </td>
+                      <td style="width: 598px">
+                        Candidates must have 10+2 with a minimum aggregate of
+                        60% marks.
+                      </td>
+                      <td style="width: 175px">INR 94,500 Per Semester</td>
+                    </tr> -->
+                    <tr>
+                      <td style="width: 296px">
+                        <strong>B.Tech </strong>
+                      </td>
+                      <td style="width: 598px">
+                        Candidates must have 10+2 in PCM or PCB with a minimum
+                        aggregate of 60% marks.
+                      </td>
+                      <td style="width: 175px">
+                        INR 1,18,500 to INR 3,23,500 Per Semester
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="width: 296px">
+                        <strong>B.Arch </strong>
+                      </td>
+                      <td style="width: 598px">
+                        Candidates must have passed 10+2 in Physics, Mathematics
+                        and third subject with a minimum of 55% marks in
+                        aggregate
+                      </td>
+                      <td style="width: 175px">INR 1,39,500 Per Semester</td>
+                    </tr>
+                    <tr>
+                      <td style="width: 296px">
+                        <strong>BCA </strong>
+                      </td>
+                      <td style="width: 598px">
+                        Candidates must have passed 10+2 with Maths/ Computer
+                        Science as one of the subjects with 50% Marks in
+                        aggregate
+                      </td>
+                      <td style="width: 175px">INR 1,07,000 Per Semester</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="collegePlacement">
+                <h4 class="marginBottom">
+                  Amity University Noida Placements 2023
+                </h4>
+                <p class="marginBottom">
+                  Amity University Noida has not released the placement report
+                  for the year 2023. According to the latest reports, more than
+                  11,000 Offers were made during Amity University Placements
+                  2023 with 1,050 participating recruiters. The highest package
+                  offered at Amity University Placements 2023 stood at INR 61.75
+                  LPA.
+                </p>
+
+                <table class="placementTable">
+                  <tbody>
+                    <tr>
+                      <th>Particulars</th>
+                      <th>Placements Statistics 2023</th>
+                    </tr>
+                    <tr>
+                      <td>Total Number of Offers</td>
+                      <td>11,000+</td>
+                    </tr>
+                    <tr>
+                      <td>Total Number of Recruiters</td>
+                      <td>1,050</td>
+                    </tr>
+                    <tr>
+                      <td>Highest Package</td>
+                      <td>INR 61.75 LPA</td>
+                    </tr>
+                    <tr>
+                      <td>Top Recruiters</td>
+                      <td>Adobe, Accenture, TCS, Flipkart, Microsoft</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- second item -->
+          <div class="collegelist boxPadding">
+            <div class="collegeTitle collegeHeading resizeImgDivSecond">
+              <img src="Assets/vjti-logo.png" alt="" />
+              <h3>Veermata Jijabai Technological Institute, Mumbai</h3>
+            </div>
+
+            <div class="collegeDegree flexDiv marginBottom">
+              <h4>Bachelor of Technology [B.Tech]</h4>
+              <p>
+                <span class="collegePrice">₹ 85,551</span>
+                <span class="collegePriceYear">1st Yr Fees</span>
+              </p>
+            </div>
+
+            <div class="collegeLabels marginBottom">
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/clock.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(62, 174, 141)"
+                  >4 Years</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-book-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 161, 0)"
+                  >Degree</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-campus-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 121, 121)"
+                  >On Campus</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-graduation-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #999"
+                  >Graduation</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-full-time-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #13a2e4"
+                  >Full Time</span
+                ></span
+              >
+            </div>
+
+            <div class="Specialization marginBottom">
+              <p>
+                <span>Specialization : </span>
+                <span>Computer Engineering </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Mechanical Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Electrical Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Information Technology </span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Textile Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics & Telecommunication Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Civil Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Production Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Textile Technology </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electric Vehicle Technology </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Cyber Physical Systems </span>
+                </span>
+              </p>
+            </div>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="applyNow"
+              >Apply Now</a
+            >
+
+            <button class="readMore" onclick="toggleReadMore(this)">
+              Read More
+            </button>
+            <div class="clickReadMore">
+              <p>
+                Veermata Jijabai Technological Institute established in 1887,
+                formerly known as Victoria Jubilee Technical Institute is an
+                autonomous institution owned by Maharashtra State Government
+                approved by AICTE. It is one of the oldest engineering colleges
+                in Asia. The institute is ranked 84 in engineering category By
+                NIRF 2022.
+              </p>
+              <div class="collegeCourses">
+                <table class="courseTable">
+                  <tbody>
+                    <tr>
+                      <td><strong>Course</strong></td>
+                      <td><strong>Eligibility Criteria</strong></td>
+                      <td><strong>Fees</strong></td>
+                    </tr>
+                    <tr>
+                      <td>B.Tech</td>
+                      <td>
+                        <strong> Specializations </strong>: Civil Engineering,
+                        Computer Engineering, Electronics Engineering,
+                        Electronics & Telecommunications Engineering, Electrical
+                        Engineering, Mechanical Engineering, Production
+                        Engineering, Textile Engineering, and Information
+                        Technology <br />
+                        <strong> Duration </strong>: 4 years <br />
+                        <strong> Eligibility </strong>: Candidates should have
+                        scored more than 50% in 10+2 examinations from a
+                        recognized board of education. <br />
+                        <strong> Selection Criteria </strong>: Entrance Based
+                        (MHT-CET)
+                      </td>
+                      <td>₹85,551 (1st Year Fees)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="collegePlacement">
+                <h4 class="marginBottom">VJTI Mumbai Placements 2023</h4>
+                <p class="marginBottom">
+                  VJTI has concluded placements for 2023. During the VJTI Mumbai
+                  Placements Drive 2023 , the Placement percentage for BTech IT
+                  stood at 100% followed by COMP at 95%. The highest package
+                  offered was INR 62 LPA by a US-based software company followed
+                  by INR 44.14 LPA by Amazon. Around 614 students got placed out
+                  of 741.
+                </p>
+
+                <table class="placementTable">
+                  <tbody>
+                    <tr>
+                      <th>Particulars</th>
+                      <th>Placement Statistics 2022</th>
+                    </tr>
+
+                    <tr>
+                      <td>Number of students enrolled</td>
+                      <td>741</td>
+                    </tr>
+                    <tr>
+                      <td>Number of students placed</td>
+                      <td>614</td>
+                    </tr>
+                    <tr>
+                      <td>Highest CTC</td>
+                      <td>INR 62 LPA</td>
+                    </tr>
+                    <tr>
+                      <td>Top recruiters</td>
+                      <td>
+                        Amazon, LinkedIn, Texas Instruments, Morgan Stanley,
+                        Visa
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- second end -->
+        </div>
+        <!-- third flex div end -->
+
+        <!-- fourth div start -->
+
+        <div class="collegeListDiv flexDiv marginBottom">
+          <div class="collegelist boxPadding">
+            <div class="collegeTitle collegeHeading">
+              <img src="Assets/SPIT Mumbai.png" alt="" />
+              <h3>Sardar Patel Institute of Technology, Mumbai</h3>
+            </div>
+
+            <div class="collegeDegree flexDiv marginBottom">
+              <h4>Bachelor of Technology [B.Tech]</h4>
+              <p>
+                <span class="collegePrice">₹ 172,804</span>
+                <span class="collegePriceYear">1st Yr Fees</span>
+              </p>
+            </div>
+
+            <div class="collegeLabels marginBottom">
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/clock.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(62, 174, 141)"
+                  >4 Years</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-book-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 161, 0)"
+                  >Degree</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-campus-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 121, 121)"
+                  >On Campus</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-graduation-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #999"
+                  >Graduation</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-full-time-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #13a2e4"
+                  >Full Time</span
+                ></span
+              >
+            </div>
+
+            <div class="Specialization marginBottom">
+              <p>
+                <span>Specialization : </span>
+                <span>Computer Engineering </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Computer Science and Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics & Telecommunication Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Data Sciences</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Artificial Intelligence & Machine Learning</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Civil Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Aerospace Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Biotechnology</span>
+                </span>
+                <!--   <span
+                  ><span class="bar">|</span><span>Mechanical Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electrical And Electronics Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics And Instrumentation Engineering</span>
+                </span> -->
+              </p>
+            </div>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="applyNow"
+              >Apply Now</a
+            >
+
+            <button class="readMore" onclick="toggleReadMore(this)">
+              Read More
+            </button>
+            <div class="clickReadMore">
+              <p>
+                Sardar Patel Institute of Technology (SPIT) is an autonomous
+                research and engineering institute associated with the Mumbai
+                University. The institute is ranked 167th under the engineering
+                category by NIRF.
+              </p>
+              <div class="collegeCourses">
+                <table class="courseTable">
+                  <tbody>
+                    <tr>
+                      <td><strong>Course</strong></td>
+                      <td><strong>Course Details</strong></td>
+                      <td><strong>Fees</strong></td>
+                    </tr>
+
+                    <!-- <tr>
+                      <td style="width: 296px">
+                        <strong>B.Com </strong>
+                      </td>
+                      <td style="width: 598px">
+                        Candidates must have 10+2 with a minimum aggregate of
+                        60% marks.
+                      </td>
+                      <td style="width: 175px">INR 94,500 Per Semester</td>
+                    </tr> -->
+                    <tr>
+                      <td style="width: 296px">
+                        <strong>B.Tech </strong>
+                      </td>
+                      <td style="width: 598px">
+                        <strong>Specialization : </strong> Computer Engineering,
+                        Electronics & Telecommunication Engineering, CSE
+                        (Artificial Intelligence & Machine Learning), CSE (Data
+                        Science) <br />
+                        <strong>Eligibility : </strong> Passed 10+2 in science
+                        stream
+                      </td>
+                      <td style="width: 175px">-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="collegePlacement">
+                <h4 class="marginBottom">
+                  Sardar Patel Institute of Technology Placement
+                </h4>
+                <p class="marginBottom">
+                  SPIT Mumbai saw prominent recruiters visit the college campus,
+                  including Facebook, Google, Microsoft, IBM, and many more, and
+                  the highest CTC offered was INR 36.5 LPA, with an average CTC
+                  of INR 12.33 LPA.
+                </p>
+
+                <table class="placementTable">
+                  <tbody>
+                    <tr>
+                      <th>Particulars</th>
+                      <th>Placements Statistics 2023</th>
+                    </tr>
+                    <tr>
+                      <td>Highest CTC offered</td>
+                      <td>36.50 LPA</td>
+                    </tr>
+                    <tr>
+                      <td>Average CTC offered</td>
+                      <td>15 LPA</td>
+                    </tr>
+                    <tr>
+                      <td>Median CTC offered</td>
+                      <td>INR 12.33 LPA</td>
+                    </tr>
+                    <tr>
+                      <td>Top Recruiters</td>
+                      <td>
+                        PhonePe, Morgan Stanley , Microsoft, JP Morgan , Google
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- second item -->
+          <div class="collegelist boxPadding">
+            <div class="collegeTitle collegeHeading">
+              <img src="Assets/Amrita Vishwa Vidyapeetham.png" alt="" />
+              <h3>Amrita Vishwa Vidyapeetham, Coimbatore</h3>
+            </div>
+
+            <div class="collegeDegree flexDiv marginBottom">
+              <h4>Bachelor of Technology [B.Tech]</h4>
+              <p>
+                <span class="collegePrice">₹ 300,000</span>
+                <span class="collegePriceYear">1st Yr Fees</span>
+              </p>
+            </div>
+
+            <div class="collegeLabels marginBottom">
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/clock.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(62, 174, 141)"
+                  >4 Years</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-book-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 161, 0)"
+                  >Degree</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-campus-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 121, 121)"
+                  >On Campus</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-graduation-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #999"
+                  >Graduation</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-full-time-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #13a2e4"
+                  >Full Time</span
+                ></span
+              >
+            </div>
+
+            <div class="Specialization marginBottom">
+              <p>
+                <span>Specialization : </span>
+                <span>Computer Science and Engineering </span>
+                <span
+                  ><span class="bar">|</span><span>Aerospace Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Artificial Intelligence</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electrical And Electronics Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics & Communication Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Chemical Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Mechanical Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics & Computer Engineering </span>
+                </span>
+                <!-- <span
+                  ><span class="bar">|</span
+                  ><span
+                    >Production Engineering
+
+                  </span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Textile Technology </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electric Vehicle Technology </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Cyber Physical Systems </span>
+                </span> -->
+              </p>
+            </div>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="applyNow"
+              >Apply Now</a
+            >
+
+            <button class="readMore" onclick="toggleReadMore(this)">
+              Read More
+            </button>
+            <div class="clickReadMore">
+              <p>
+                Amrita Vishwa Vidyapeetham or Amrita University is a private
+                deemed-university located in Coimbatore, India. It is a NAAC A++
+                accredited university and the 7th best university in India as
+                per the NIRF Rankings 2023. AVV is a multi-campus,
+                multi-disciplinary university with 15 schools spread across six
+                campuses in the southern part of India.
+              </p>
+              <div class="collegeCourses">
+                <table class="courseTable">
+                  <tbody>
+                    <tr>
+                      <td><strong>Course</strong></td>
+                      <td><strong>Eligibility Criteria</strong></td>
+                      <td><strong>Fees</strong></td>
+                    </tr>
+                    <tr>
+                      <td>B.Tech</td>
+                      <td>
+                        <strong> Eligibility Criteria </strong>: Class 12 passed
+                        or equivalent with not less than 55% in PCM separately
+                        or aggregate minimum of 60% in PCM
+                        <br />
+                        <strong> Selection Criteria </strong>: Amrita Entrance
+                        Exam Engineering (AEEE) or JEE Main
+                      </td>
+                      <td>INR 2,50,000 - 3,25,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="collegePlacement">
+                <h4 class="marginBottom">
+                  Amrita Vishwa Vidyapeetham Placement
+                </h4>
+                <p class="marginBottom">
+                  The university has a placement cell that organizes various
+                  training sessions. Students who are eligible and opted for
+                  placements have more than one job offer, on average.
+                  Placements are facilitated by enhancing industry-academia
+                  association through frequent visits, interactions with the top
+                  management and facilitation of Faculty Development Programs,
+                  Student Visits, Industrial Training, and Project Guidance
+                  under the Corporate Action Plan.
+                </p>
+
+                <table class="placementTable">
+                  <tbody>
+                    <tr>
+                      <th>Particulars</th>
+                      <th>Placement Statistics 2022</th>
+                    </tr>
+
+                    <tr>
+                      <td>Students Placed</td>
+                      <td>95%</td>
+                    </tr>
+                    <tr>
+                      <td>No. of Companies</td>
+                      <td>400+</td>
+                    </tr>
+                    <tr>
+                      <td>Highest Domestic CTC</td>
+                      <td>INR 43.33 LPA</td>
+                    </tr>
+                    <tr>
+                      <td>Top recruiters</td>
+                      <td>
+                        Google, Microsoft, Intel, Reliance, Cognizant, Toyota,
+                        Mahindra, Samsung, Infosys, Ford, Samsung, LG, IBM,
+                        Whirlpool, HSBC, Bosch, Hyundai Mobis, etc
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- second end -->
+        </div>
+        <!--  fourth div end -->
+
+        <!-- fifth div start -->
+        <div class="collegeListDiv flexDiv marginBottom">
+          <div class="collegelist boxPadding">
+            <div class="collegeTitle collegeHeading">
+              <img src="Assets/picte.jpeg" alt="" />
+              <h3>Pune Institute of Computer Technology, Pune</h3>
+            </div>
+
+            <div class="collegeDegree flexDiv marginBottom">
+              <h4>Bachelor of Engineering [BE]</h4>
+              <p>
+                <span class="collegePrice">₹ 92,000</span>
+                <span class="collegePriceYear">1st Yr Fees</span>
+              </p>
+            </div>
+
+            <div class="collegeLabels marginBottom">
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/clock.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(62, 174, 141)"
+                  >4 Years</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-book-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 161, 0)"
+                  >Degree</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-campus-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 121, 121)"
+                  >On Campus</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-graduation-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #999"
+                  >Graduation</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-full-time-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #13a2e4"
+                  >Full Time</span
+                ></span
+              >
+            </div>
+
+            <div class="Specialization marginBottom">
+              <p>
+                <span>Specialization : </span>
+                <span>Civil Engineering </span>
+                <span
+                  ><span class="bar">|</span><span>Computer Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics & Telecommunication Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Mechanical Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Computer Science and Business Systems</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Artificial Intelligence</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Data Sciences </span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Cyber Security</span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Information Technology</span>
+                </span>
+                <!-- <span
+                  ><span class="bar">|</span
+                  ><span>Electrical And Electronics Engineering</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics And Instrumentation Engineering</span>
+                </span> -->
+              </p>
+            </div>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="applyNow"
+              >Apply Now</a
+            >
+
+            <button class="readMore" onclick="toggleReadMore(this)">
+              Read More
+            </button>
+            <div class="clickReadMore">
+              <p>
+                Pune Institute of Computer Technology is a popular private owned
+                institute which is known for its affordable fee structure. The
+                institute was established in 1983 and is affiliated to SPPU,
+                Pune. The institute offers B.E and M.E courses in various fields
+                mainly focusing in the computer science field.
+              </p>
+              <div class="collegeCourses">
+                <table class="courseTable">
+                  <tbody>
+                    <tr>
+                      <td><strong>Course</strong></td>
+                      <td><strong>Course Details</strong></td>
+                      <td><strong>Fees</strong></td>
+                    </tr>
+
+                    <!-- <tr>
+                      <td style="width: 296px">
+                        <strong>B.Com </strong>
+                      </td>
+                      <td style="width: 598px">
+                        Candidates must have 10+2 with a minimum aggregate of
+                        60% marks.
+                      </td>
+                      <td style="width: 175px">INR 94,500 Per Semester</td>
+                    </tr> -->
+                    <tr>
+                      <td style="width: 296px">
+                        <strong>B.E </strong>
+                      </td>
+                      <td style="width: 598px">
+                        <strong>Duration :</strong>4 years <br />
+                        <strong>Selection Criteria : </strong> MH CET, JEE Mains
+
+                        <br />
+                        <strong>Eligibility : </strong> 10+2
+                      </td>
+                      <td style="width: 175px">₹3.5 Lakhs (1st Year Fees)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="collegePlacement">
+                <h4 class="marginBottom">PICT Pune Placements</h4>
+                <p class="marginBottom">
+                  PICT Pune provides ample placement opportunities to the
+                  students. The college has a dedicated Training and placement
+                  Cell working for the students. Pre- Placement talks are
+                  conducted for the students prior to the placement session
+                  every year. The Cell has adequate infrastructure to conduct
+                  all the activities.
+                </p>
+
+                <table class="placementTable">
+                  <tbody>
+                    <tr>
+                      <th>Particulars</th>
+                      <th>Placements Statistics 2023</th>
+                    </tr>
+                    <tr>
+                      <td>Highest CTC offered</td>
+                      <td>91.00 Lakhs</td>
+                    </tr>
+                    <tr>
+                      <td>Average CTC offered</td>
+                      <td>7.75 LPA</td>
+                    </tr>
+
+                    <tr>
+                      <td>Top Recruiters</td>
+                      <td>
+                        Siemens , Schlumberger , BYJU’S, JP Morgan , Google
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- second item -->
+          <div class="collegelist boxPadding">
+            <div class="collegeTitle collegeHeading resizeImgDivThird">
+              <img src="Assets/COEP Pune.png" alt="" />
+              <h3>College Of Engineering Pune, Pune</h3>
+            </div>
+
+            <div class="collegeDegree flexDiv marginBottom">
+              <h4>Bachelor of Technology [B.Tech]</h4>
+              <p>
+                <span class="collegePrice">₹ 84,250</span>
+                <span class="collegePriceYear">1st Yr Fees</span>
+              </p>
+            </div>
+
+            <div class="collegeLabels marginBottom">
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/clock.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(62, 174, 141)"
+                  >4 Years</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-book-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 161, 0)"
+                  >Degree</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-campus-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: rgb(255, 121, 121)"
+                  >On Campus</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-graduation-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #999"
+                  >Graduation</span
+                ></span
+              >
+              <span class="collegeLabelFlex"
+                ><span class="labelSpan"
+                  ><img src="Assets/icons8-full-time-16.png" alt="" /></span
+                ><span class="yearSpan" style="color: #13a2e4"
+                  >Full Time</span
+                ></span
+              >
+            </div>
+
+            <div class="Specialization marginBottom">
+              <p>
+                <span>Specialization : </span>
+                <span>Computer Science and Engineering </span>
+                <span
+                  ><span class="bar">|</span><span>Aerospace Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Artificial Intelligence</span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electrical And Electronics Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics & Communication Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Chemical Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Mechanical Engineering </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electronics & Computer Engineering </span>
+                </span>
+                <!-- <span
+                  ><span class="bar">|</span
+                  ><span
+                    >Production Engineering
+
+                  </span>
+                </span>
+                <span
+                  ><span class="bar">|</span><span>Textile Technology </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Electric Vehicle Technology </span>
+                </span>
+                <span
+                  ><span class="bar">|</span
+                  ><span>Cyber Physical Systems </span>
+                </span> -->
+              </p>
+            </div>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="applyNow"
+              >Apply Now</a
+            >
+
+            <button class="readMore" onclick="toggleReadMore(this)">
+              Read More
+            </button>
+            <div class="clickReadMore">
+              <p>
+                College of Engineering Pune (CoEP) is an autonomous public
+                university located in Pune, Maharashtra. Established in 1854,
+                COEP Pune is the 3rd oldest engineering college in India. Later
+                in 2022, COEP was granted university status after a notification
+                of the Maharastra Government. COAP Pune is located over a 36
+                acres of campus divided into North and South campus. The
+                university is ranked 73 out of 200 in the NIRF 2023 Engineering
+                category rankings.
+              </p>
+              <div class="collegeCourses">
+                <table class="courseTable">
+                  <tbody>
+                    <tr>
+                      <td><strong>Course</strong></td>
+                      <td><strong>Eligibility Criteria</strong></td>
+                      <td><strong>Fees</strong></td>
+                    </tr>
+                    <tr>
+                      <td>B.Tech</td>
+                      <td>10+2 with 50% + MHT CET</td>
+                      <td>₹84,250 (1st Year Fees)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="collegePlacement">
+                <h4 class="marginBottom">COEP Placements</h4>
+                <p class="marginBottom">
+                  The COEP placements 2023 final report has been released in
+                  July 2023. As per the reports, the institute has witnessed a
+                  total UG placement rate of 73.35% and 52.40% of the PG
+                  placement rate. The highest number of students were placed
+                  from the BTech Computer Engineering department which is 139
+                  out of 159 enrolled students.
+                </p>
+
+                <table class="placementTable">
+                  <tbody>
+                    <tr>
+                      <th>Particulars</th>
+                      <th>Placement Statistics 2022</th>
+                    </tr>
+
+                    <tr>
+                      <td>Students Placed</td>
+                      <td>709</td>
+                    </tr>
+
+                    <tr>
+                      <td>Highest Domestic CTC</td>
+                      <td>INR 50.50 LPA</td>
+                    </tr>
+                    <tr>
+                      <td>Median Salary</td>
+                      <td>INR 11.35 LPA</td>
+                    </tr>
+                    <tr>
+                      <td>Top recruiters</td>
+                      <td>
+                        Mastercard, Finiq, Google, Goldman Sachs, Google, and
+                        Bajaj Finserv
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- second end -->
+        </div>
+
+        <!-- fifth div end -->
+      </div>
+    </section>
+    <!-- Top College end -->
+
+    <!-- top exam start -->
+    <section>
+      <div class="spacingDiv">
+        <h2 class="sectionTitle">Top Exams</h2>
+        <div class="collegelist boxPadding marginBottom examsList widthFull">
+          <div class="flexDiv marginBottom">
+            <div class="alignItemCenter examImageDiv">
+              <img src="Assets/jee.png" alt="" />
+              <h4>JEE MAIN 2024</h4>
+            </div>
+            <div class="examDuration alignItemCenter">
+              <div class="responsiveMarginBottom">
+                <span>01 NOV 23 - 21 JAN 24 </span>
+                <h5>application form</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>30 JAN 24 </span>
+                <h5>examination</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>12 FEB 24 </span>
+                <h5>result announce</h5>
+              </div>
+            </div>
+          </div>
+          <div class="alignItemCenter gapContainer">
+            <p class="marginBottom mainsDetailsPara">
+              JEE Main is the national level undergraduate engineering entrance
+              exam. This exam is acceptable for the admission in various
+              B.Tech/B.E Programs.
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="ExamApplyNow"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+
+        <!-- second exam -->
+        <div class="collegelist boxPadding marginBottom examsList widthFull">
+          <div class="flexDiv marginBottom">
+            <div class="alignItemCenter examImageDiv">
+              <img src="Assets/gatellogo.png" alt="" />
+              <h4>JEE Advanced 2024</h4>
+            </div>
+            <div class="examDuration alignItemCenter">
+              <div class="responsiveMarginBottom">
+                <span> 21 APR 24 - 30 APR 24 </span>
+                <h5>application form</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>26 MAY 24 </span>
+                <h5>examination</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>09 JUN 24 </span>
+                <h5>result announce</h5>
+              </div>
+            </div>
+          </div>
+          <div class="alignItemCenter gapContainer">
+            <p class="marginBottom mainsDetailsPara">
+              JEE Advanced is applicable for admission in Bachelor’s, Integrated
+              Master’s and Dual Degree programs in IITs.
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="ExamApplyNow"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+        <!-- second exam end -->
+
+        <!--  third exam -->
+        <div class="collegelist boxPadding marginBottom examsList widthFull">
+          <div class="flexDiv marginBottom">
+            <div class="alignItemCenter examImageDiv">
+              <img src="Assets/BITS Pilani Logo.png" alt="" />
+              <h4>BITSAT 2024</h4>
+            </div>
+            <div class="examDuration alignItemCenter">
+              <div class="responsiveMarginBottom">
+                <span> 31 JAN 24 - 15 MAY 24 </span>
+                <h5>application form</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>21 MAY 24 - 26 MAY 24 </span>
+                <h5>examination</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>30 MAY 24 </span>
+                <h5>result announce</h5>
+              </div>
+            </div>
+          </div>
+          <div class="alignItemCenter gapContainer">
+            <p class="marginBottom mainsDetailsPara">
+              BITSAT is a university level exam. BITSAT is conducted for
+              admission in B.E, B.Pharma and M.Sc.
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="ExamApplyNow"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+        <!-- third exam end -->
+
+        <!--  fourth exam start -->
+        <div class="collegelist boxPadding marginBottom examsList widthFull">
+          <div class="flexDiv marginBottom">
+            <div class="alignItemCenter examImageDiv">
+              <img src="Assets/webjee.png" alt="" />
+              <h4>WBJEE 2024</h4>
+            </div>
+            <div class="examDuration alignItemCenter">
+              <div class="responsiveMarginBottom">
+                <span> 28 DEC 23 - 31 JAN 24 </span>
+                <h5>application form</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>28 APR 24 </span>
+                <h5>examination</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>26 MAY 24 </span>
+                <h5>result announce</h5>
+              </div>
+            </div>
+          </div>
+          <div class="alignItemCenter gapContainer">
+            <p class="marginBottom mainsDetailsPara">
+              WBJEE exam is conducted for admissions in the undergraduate
+              courses in engineering and pharmacy.
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="ExamApplyNow"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+        <!-- fourth exam end -->
+
+        <!--  fifth exam start -->
+        <div class="collegelist boxPadding marginBottom examsList widthFull">
+          <div class="flexDiv marginBottom">
+            <div class="alignItemCenter examImageDiv">
+              <img src="Assets/combect.png" alt="" />
+              <h4>COMEDK UGET 2024</h4>
+            </div>
+            <div class="examDuration alignItemCenter">
+              <div class="responsiveMarginBottom">
+                <span> 15 FEB 24 - 27 APR 24 </span>
+                <h5>application form</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>12 MAY 24 </span>
+                <h5>examination</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>10 JUN 24 </span>
+                <h5>result announce</h5>
+              </div>
+            </div>
+          </div>
+          <div class="alignItemCenter gapContainer">
+            <p class="marginBottom mainsDetailsPara">
+              COMEDK UGET is a State level exam for admission to
+              B.E/B.Tech/B.Arch courses.
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="ExamApplyNow"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+        <!-- fifth exam end -->
+
+        <!-- sixth exam start -->
+        <div class="collegelist boxPadding marginBottom examsList widthFull">
+          <div class="flexDiv marginBottom">
+            <div class="alignItemCenter examImageDiv">
+              <img src="Assets/viee.png" alt="" />
+              <h4>VITEEE 2024</h4>
+            </div>
+            <div class="examDuration alignItemCenter">
+              <div class="responsiveMarginBottom">
+                <span> 11 NOV 23 - 31 MAR 24 </span>
+                <h5>application form</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>19 APR 24 - 30 APR 24 </span>
+                <h5>examination</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>03 MAY 24 </span>
+                <h5>result announce</h5>
+              </div>
+            </div>
+          </div>
+          <div class="alignItemCenter gapContainer">
+            <p class="marginBottom mainsDetailsPara">
+              VITEEE is a national level engineering entrance exam for admission
+              in B.Tech programs.
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="ExamApplyNow"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+        <!-- sixth exam end -->
+
+        <!-- seventh exam start -->
+        <div class="collegelist boxPadding marginBottom examsList widthFull">
+          <div class="flexDiv marginBottom">
+            <div class="alignItemCenter examImageDiv">
+              <img src="Assets/mhcet.png" alt="" />
+              <h4>MHT CET 2024</h4>
+            </div>
+            <div class="examDuration alignItemCenter">
+              <div class="responsiveMarginBottom">
+                <span> 20 FEB 24 - 25 MAR 24 </span>
+                <h5>application form</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>16 APR 24 - 30 APR 24 </span>
+                <h5>examination</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>10 JUN 24 </span>
+                <h5>result announce</h5>
+              </div>
+            </div>
+          </div>
+          <div class="alignItemCenter gapContainer">
+            <p class="marginBottom mainsDetailsPara">
+              MHT CET is a state-level entrance exam conducted for admission
+              into Engineering and Allied Health Sciences courses in Maharashtra
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="ExamApplyNow"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+        <!-- sevent exam end -->
+
+        <!-- eigth exam start -->
+        <div class="collegelist boxPadding marginBottom examsList widthFull">
+          <div class="flexDiv marginBottom">
+            <div class="alignItemCenter examImageDiv">
+              <img src="Assets/met.png" alt="" />
+              <h4>MET 2024</h4>
+            </div>
+            <div class="examDuration alignItemCenter">
+              <div class="responsiveMarginBottom">
+                <span> 13 OCT 23 - 15 APR 24 </span>
+                <h5>application form</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>28 APR 24 - 30 APR 24 </span>
+                <h5>examination</h5>
+              </div>
+              <!-- <div class="responsiveMarginBottom">
+                <span>10 JUN 24 </span>
+                <h5>result announce</h5>
+              </div> -->
+            </div>
+          </div>
+          <div class="alignItemCenter gapContainer">
+            <p class="marginBottom mainsDetailsPara">
+              MET is a university-level exam for admission to various UG and PG
+              degree programs
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="ExamApplyNow"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+        <!-- eigth exam end -->
+
+        <!-- ninth exam start -->
+        <div class="collegelist boxPadding marginBottom examsList widthFull">
+          <div class="flexDiv marginBottom">
+            <div class="alignItemCenter examImageDiv">
+              <img src="Assets/up.png" alt="" />
+              <h4>UPCET 2024</h4>
+            </div>
+            <div class="examDuration alignItemCenter">
+              <div class="responsiveMarginBottom">
+                <span> 01 NOV 23 - 04 DEC 23 </span>
+                <h5>application form</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>31 JAN 24 </span>
+                <h5>examination</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>08 JUL 23 </span>
+                <h5>result announce</h5>
+              </div>
+            </div>
+          </div>
+          <div class="alignItemCenter gapContainer">
+            <p class="marginBottom mainsDetailsPara">
+              Uttar Pradesh Combined Entrance Test
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="ExamApplyNow"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+        <!-- ninth exam end -->
+
+        <!-- tenth exam start -->
+        <div class="collegelist boxPadding marginBottom examsList widthFull">
+          <div class="flexDiv marginBottom">
+            <div class="alignItemCenter examImageDiv">
+              <img src="Assets/jkcet.png" alt="" />
+              <h4>JKCET 2024</h4>
+            </div>
+            <div class="examDuration alignItemCenter">
+              <div class="responsiveMarginBottom">
+                <span> 20 MAY 24 - 04 APR 24</span>
+                <h5>application form</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>28 MAY 24 </span>
+                <h5>examination</h5>
+              </div>
+              <div class="responsiveMarginBottom">
+                <span>18 JUN 24 </span>
+                <h5>result announce</h5>
+              </div>
+            </div>
+          </div>
+          <div class="alignItemCenter gapContainer">
+            <p class="marginBottom mainsDetailsPara">
+              JKCET is an entrance exam conducted by JKBOPEE, for admission to
+              B. Tech and B. Arch programs
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
+              target="_blank"
+              class="ExamApplyNow"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+        <!-- tenth exam end -->
+      </div>
+    </section>
+    <!-- top exam end -->
+
+    <!-- top placement college -->
+    <section>
+      <div class="spacingDiv">
+        <h2 class="sectionTitle">Top Placement Colleges</h2>
+        <div class="collegeCarousel">
+          <div class="wrapper">
+            <div class="my-slider">
+              <!-- <div class="sliderParentDIv">
+                <img src="Assets/sliderVitjpg.jpg" alt="" />
+                <div class="sliderCaption">
+                  <h6>Vellore Institute of Technology</h6>
+                  <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Vellore, Tamil Nadu</span>
+                  </p>
+                </div>
+              </div> -->
+              <div class="sliderParentDIv">
+                <img src="Assets/sliderVitjpg.jpg" alt="" />
+                <div class="sliderCaption">
+                  <h6>Vellore Institute of Technology</h6>
+                  <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Vellore, Tamil Nadu</span>
+                  </p>
+                </div>
+              </div>
+              <div class="sliderParentDIv">
+                <img src="Assets/slide img/mukeshpael.png" alt="" />
+                <div class="sliderCaption">
+                  <h6>Mukesh Patel School of Technology Management, Mumbai</h6>
+                  <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Mumbai, Maharashtra</span>
+                  </p>
+                </div>
+              </div>
+              <div class="sliderParentDIv">
+                <img src="Assets/slide img/coep.png" alt="" />
+                <div class="sliderCaption">
+                  <h6>College Of Engineering Pune</h6>
+                  <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Pune, Maharashtra</span>
+                  </p>
+                </div>
+              </div>
+              <div class="sliderParentDIv">
+                <img src="Assets/slide img/manipal.png" alt="" />
+                <div class="sliderCaption">
+                  <h6>Manipal Institute of Technology</h6>
+                  <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Bengaluru, Karnataka</span>
+                  </p>
+                </div>
+              </div>
+              <div class="sliderParentDIv">
+                <img src="Assets/slide img/amrita.png" alt="" />
+                <div class="sliderCaption">
+                  <h6>Amrita Vishwa Vidyapeetham</h6>
+                  <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span> Coimbatore, Tamil Nadu</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- top placement college  end-->
+
+    <!-- footer start -->
+    <section class="footerDiv">
+      <div class="spacingDiv">
+        <footer class="flexDiv">
+          <div class="copyright">
+            <p>
+              © 2024 <a href="https://onlyeducation.in/"> Only Education</a>.
+              All Rights Reserved
+            </p>
+          </div>
+
+          <div class="socialIcons">
+            <a href="https://www.facebook.com/onlyedu.co.in" target="_blank"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/onlyeducationofficial/"
+              target="_blank"
+            >
+              <i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://twitter.com/onlyeducation17" target="_blank"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/onlyeducation/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </div>
+        </footer>
+      </div>
+    </section>
+    <!-- footer end -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
