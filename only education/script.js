@@ -355,3 +355,104 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+// banner
+// document.addEventListener('DOMContentLoaded', function () {
+//   const images = [
+//     'http://127.0.0.1:58458/Assets/sliderVitjpg.jpg',
+//     'http://127.0.0.1:58458/Assets/slide%20img/mukeshpael.png',
+//     'http://127.0.0.1:58458/Assets/slide%20img/manipal.png'
+//   ];
+
+//   const bannerImg = document.querySelector('.bannerImg');
+
+//   if (!bannerImg) {
+//     console.error('Element with class "bannerImg" not found.');
+//     return;
+//   }
+
+//   let currentIndex = 0;
+
+//   function changeBackground() {
+//     currentIndex = (currentIndex + 1) % images.length;
+//     bannerImg.style.transition = 'background-position 0.8s ease-in-out';
+//     bannerImg.style.backgroundPosition = '100% 50%'; // Slide from right to left
+//     setTimeout(function () {
+//       bannerImg.style.backgroundImage = `url('${images[currentIndex]}')`;
+//       bannerImg.style.backgroundPosition = '0 50%'; // Reset position to start
+//     }, 800); // 800 milliseconds for slide transition
+//   }
+
+//   // Set initial background image
+//   bannerImg.style.backgroundImage = `url('${images[currentIndex]}')`;
+
+//   setInterval(changeBackground, 3000); // Change image every 3 seconds
+// });
+
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   const images = [
+//     'assets/manipal banner.png',
+//     'assets/rorkee banner.png',
+//     'assets/amrita vidhyapeeth banner.png'
+//     // 'http://127.0.0.1:58458/Assets/slide%20img/manipal.png'
+//   ];
+
+//   const bannerImg = document.querySelector('.bannerImg');
+
+//   if (!bannerImg) {
+//     console.error('Element with class "bannerImg" not found.');
+//     return;
+//   }
+
+//   // Set initial background image
+//   bannerImg.style.backgroundImage = `url('${images[2]}')`; // Display only the third image
+
+//   // Remove the slider on screens with a width of 768 pixels or less
+//   if (window.innerWidth <= 768) {
+//     return; // Exit the function without setting up the interval
+//   }
+
+//   let currentIndex = 0;
+
+//   function changeBackground() {
+//     currentIndex = (currentIndex + 1) % images.length;
+//     bannerImg.style.backgroundImage = `url('${images[currentIndex]}')`;
+//   }
+
+//   var intervalId = setInterval(changeBackground, 4000); // Change image every 3 seconds on larger screens
+// });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const images = [
+    'assets/manipal banner.png',
+    'assets/rorkee banner.png',
+    'assets/amrita vidhyapeeth banner.png'
+  ];
+
+  const bannerImg = document.querySelector('.bannerImg');
+
+  if (!bannerImg) {
+    console.error('Element with class "bannerImg" not found.');
+    return;
+  }
+
+  // Set initial background image
+  bannerImg.style.backgroundImage = `url('${images[2]}')`; // Display only the third image
+
+  // Remove the slider on screens with a width of 768 pixels or less
+  if (window.innerWidth <= 768) {
+    return; // Exit the function without setting up the interval
+  }
+
+  let currentIndex = 0;
+
+  function changeBackground() {
+    currentIndex = (currentIndex + 1) % images.length;
+    bannerImg.style.transition = 'background-image 0.8s ease-in-out';
+    bannerImg.style.backgroundImage = `url('${images[currentIndex]}')`;
+  }
+
+  var intervalId = setInterval(changeBackground, 2000); // Change image every 4 seconds on larger screens
+});
