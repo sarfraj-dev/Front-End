@@ -72,6 +72,7 @@ $(document).ready(function () {
 // slider end
 
 // form start
+/*
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbxV2S2SP1qBCvoZB4mQRml_NxhOLipxit40TG-R3hQm-55vle2hjmb8tsVXmnfmoJo/exec";
@@ -135,6 +136,7 @@ function validateMobileNumber() {
     // If the input passes all checks, the form is valid
     return true;
 }
+*/
 
 // form end
 
@@ -150,3 +152,206 @@ const p = document.getElementById("currentDate");
 p.innerHTML = newDate; 
 
 // current date end
+
+
+
+
+const openPopupButtons = document.querySelectorAll('.formPopupButton');
+const popupContainerDiv = document.getElementById('popupContainer');
+
+openPopupButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    popupContainerDiv.style.display = 'flex';
+  });
+});
+
+function closePopup() {
+  popupContainer.style.display = 'none';
+}
+// popup form
+
+
+/*
+
+const openPopupButton = document.getElementById('openPopup');
+  const popupContainer = document.getElementById('popupContainer');
+  const leadForm = document.getElementById('leadForm');
+
+  openPopupButton.addEventListener('click', () => {
+    popupContainer.style.display = 'flex';
+  });
+
+  function closePopup() {
+    popupContainer.style.display = 'none';
+  }
+
+  function submitForm() {
+    const formData = new FormData(leadForm);
+    const formObject = {};
+    
+    formData.forEach((value, key) => {
+      formObject[key] = value;
+    });
+
+    const url = 'https://script.google.com/macros/s/AKfycbxV2S2SP1qBCvoZB4mQRml_NxhOLipxit40TG-R3hQm-55vle2hjmb8tsVXmnfmoJo/exec';
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: new URLSearchParams(formObject).toString()
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Form data sent successfully', data);
+      // Assuming your server responds with a JSON containing success message
+      // You can customize the logic to display a success message or redirect
+      // For example: displaySuccessMessage(data.message);
+      leadForm.reset();
+
+      closePopup();
+
+
+    })
+    .catch(error => {
+      console.error('Error sending form data:', error);
+      // Handle the error, show an error message, etc.
+    });
+  }
+
+  window.onclick = function (event) {
+    if (event.target === popupContainer) {
+      closePopup();
+    }
+  };
+
+*/
+
+
+function submitForm() {
+  const leadForm = document.getElementById('leadForm');
+  const requiredFields = leadForm.querySelectorAll('[required]');
+  const formObject = {};
+
+  // Check if all required fields have values
+  let isValid = true;
+  requiredFields.forEach(field => {
+    const fieldName = field.getAttribute('name');
+    const fieldValue = field.value.trim();
+
+    if (!fieldValue) {
+      isValid = false;
+      // Display an error message or style the field to indicate it's required
+      // field.style.border = '1px solid red';
+    } else {
+      // If the field has a value, remove any previous error styling
+      field.style.border = '';
+    }
+
+    formObject[fieldName] = fieldValue;
+  });
+
+  // If any required field is empty, don't proceed with the submission
+  if (!isValid) {
+    return;
+  }
+
+  const url = 'https://script.google.com/macros/s/AKfycbxV2S2SP1qBCvoZB4mQRml_NxhOLipxit40TG-R3hQm-55vle2hjmb8tsVXmnfmoJo/exec';
+
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: new URLSearchParams(formObject).toString()
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Form data sent successfully', data);
+      // Assuming your server responds with a JSON containing success message
+      // You can customize the logic to display a success message or redirect
+      // For example: displaySuccessMessage(data.message);
+      leadForm.reset();
+      closePopup();
+    })
+    .catch(error => {
+      console.error('Error sending form data:', error);
+      // Handle the error, show an error message, etc.
+    });
+}
+
+// faq start
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   const faqItems = document.querySelectorAll('.faq-item');
+
+//   document.addEventListener('click', function (event) {
+//     // Close any opened FAQ item when clicking outside
+//     if (!event.target.closest('.faq-item')) {
+//       closeAllFAQItems();
+//     }
+//   });
+
+//   faqItems.forEach(item => {
+//     const question = item.querySelector('.question');
+//     const answer = item.querySelector('.answer');
+
+//     question.addEventListener('click', function (event) {
+//       event.stopPropagation(); // Prevent the click event from reaching the document listener
+
+//       closeAllFAQItems(); // Close any opened FAQ item
+
+//       item.classList.toggle('open');
+//       answer.style.display = item.classList.contains('open') ? 'block' : 'none';
+//       answer.style.height="auto";
+//     });
+//   });
+
+//   function closeAllFAQItems() {
+//     faqItems.forEach(item => {
+//       item.classList.remove('open');
+//       const answer = item.querySelector('.answer');
+//       answer.style.display = 'none';
+//       answer.style.height = '0'; // Smooth collapse
+//     });
+//   }
+// });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  // Open the first FAQ item by default
+  const firstItem = faqItems[0];
+  const firstAnswer = firstItem.querySelector('.answer');
+  firstItem.classList.add('open');
+  firstAnswer.style.display = 'block';
+  firstAnswer.style.height = 'auto';
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.question');
+    const answer = item.querySelector('.answer');
+
+    question.addEventListener('click', function () {
+      const isOpen = item.classList.toggle('open');
+      answer.style.display = isOpen ? 'block' : 'none';
+      answer.style.height = isOpen ? 'auto' : '0';
+
+      // Close other FAQ items when opening a new one
+      if (isOpen) {
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item && otherItem.classList.contains('open')) {
+            otherItem.classList.remove('open');
+            otherItem.querySelector('.answer').style.display = 'none';
+            otherItem.querySelector('.answer').style.height = '0';
+          }
+        });
+      }
+    });
+  });
+});
+
+
+
+

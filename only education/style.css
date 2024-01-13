@@ -1,4 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+/* news section start */
+
+.newsSectionDiv{
+  border: 1px solid gray;
+}
+.newsDiv{
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 17px 8px;
+  width: 33.33%;
+  padding: 15px 0;
+}
+.newsDiv img{
+  max-width: 70px;
+    /* background-color: orange; */
+    padding: 8px;
+    /* margin-left: 5%; */
+    border-radius: 5px;
+}
+.newsFlexDiv{
+display: flex;
+gap: 2%;  
+}
+.newsHeadingDiv{
+  display: flex !important;
+  align-items: center !important;
+  gap: 2% !important;
+  /* justify-content: space-evenly !important; */
+}
+.newsHeadingDiv h3{
+  font-size: 16px;
+  font-weight: 500;
+}
+.newsDiv p, .newsReadMore{
+  padding-left: 4%;
+  padding-right: 3%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.newsDiv .fa-solid{
+  font-size: 11px;
+}
+
+/* news section end */
+
+
+.bannerSpacing{
+  max-width: 90% !important;
+}
+/* .bannerSpacingFlex{
+  gap: 5% !important;
+} */
 
 * {
   margin: 0;
@@ -12,8 +62,10 @@ a:hover{
   text-decoration: none;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: system-ui;
 }
+
 .spacingDiv {
   width: 100%;
   padding-right: 15px;
@@ -25,6 +77,7 @@ body {
 .flexDiv {
   display: flex;
   justify-content: space-between;
+  /* flex-direction: column; */
   /* align-items: center; */
 }
 .boxPadding {
@@ -80,7 +133,8 @@ width: 23%;
   align-items: start !important;
 }
 .bannerImg{
-  background-image: url(Assets/iitmumbai.jpeg);
+  /* background-image: url(Assets/amrita\ vidhyalaya\,\ only\ education.png); */
+  background-image: url(Assets/rorkee.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center;
@@ -90,22 +144,25 @@ width: 23%;
   display: flex;
   flex-direction: column;
   /* max-width: 40%; */
-  background: #003b5b;
+  background: #ffffff;
   padding: 25px 20px;
-
+border-radius: 10px;
 }
 .formContainer h4{
-  color: white;
-  text-align: center;
+  color: orange;
+  /* text-align: center; */
   margin-bottom: 3%;
   font-size: 20px;
 }
+
 
 input {
   /* width: 95%; */
   padding: 10px;
   margin-bottom: 10px;
-  font-size: 19px;
+  font-size: 16px;
+border-radius: 10px;
+border: 1px solid #ced4da;
 }
 input:focus-visible{
   outline: none;
@@ -118,15 +175,18 @@ select {
   /* width: 99%; */
   padding: 10px;
   margin-bottom: 10px;
-  font-size: 19px;
+  font-size: 16px;
+border-radius: 10px;
+border: 1px solid #ced4da;
+  
 }
 option{
-  font-size: 19px;
+  font-size: 16px;
 }
 
 #submit {
   border: none;
-  background-color: orangered;
+  background-color: orange;
   color: white;
   width: 98%;
   padding: 10px;
@@ -136,7 +196,7 @@ option{
 }
 
 #submit:hover {
-  background-color: #333;
+  background-color: #FFD580;
 }
 .bannerAlignCenter{
   align-items: center !important;
@@ -152,7 +212,7 @@ option{
     width: 50%;
   }
 
-  #currentDate{
+  #currentDate, .currentDate{
     display: none;
   }
 /* banner form end */
@@ -166,7 +226,11 @@ option{
   width: fit-content;
 }
 .collegeTitle img {
-  max-width: 50px;
+  max-width: 70px;
+  background-color: white;
+  padding: 8px;
+  margin-left: 5%;
+  border-radius: 5px;
 }
 .collegeDegree h4 {
   color: black;
@@ -218,7 +282,13 @@ option{
   margin-bottom: 2%;
 }
 .collegeTitle h3 {
-  font-size: 18px;
+  font-size: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  font-family: system-ui;
+  margin-top: 2%;
+  margin-bottom: 1%;
 }
 .readMore {
   color: rgb(255, 121, 0);
@@ -312,9 +382,34 @@ td:first-child {
 .resizeImgDivThird img{
   max-width: 40px;
 }
+
+
 /* Top College end */
 
-
+.firstBannerImg{
+  background-image: url(Assets/colleges/birla\ institute.png);
+  height: 25vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  
+}
+.topCollegesBannerImgsDiv{
+  position: relative;
+}
+.bannerOverlayOverImg{
+  background-image: linear-gradient(to top, #0000004d, #323c4f);
+  position: absolute;
+    width: 100%;
+    min-height: 150px;
+    height: 100%;
+    max-height: 100px;
+    top: 0px;
+}
 /* Top courses start*/
 .examsList h4{
   color: #4d586c;
@@ -333,6 +428,7 @@ td:first-child {
   font-size: 11.6px;
     color: #7e8995;
     font-weight: 700;
+    font-family: "Roboto", sans-serif;
 }
 .examDuration h5{
   color: #5a88bb;
@@ -352,7 +448,7 @@ td:first-child {
   padding-bottom: 10px; */
 }
 .ExamApplyNow{
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   border-radius: 88.9px;
   border: 1px solid #d6d6d6;
@@ -363,6 +459,7 @@ td:first-child {
   text-decoration: none;
   background-color: #ff7900;
   color: #fff;
+  cursor: pointer;
 }
 .ExamApplyNow:hover{
   color: #80899a;
@@ -441,7 +538,7 @@ td:first-child {
   font-size: 18%;
 }
 .sliderParentDIv span{
-  font-weight: 800;
+  /* font-weight: 800; */
   font-size: 14px;
 }
 .sliderParentDIv img{
@@ -487,9 +584,355 @@ cursor: pointer ;
 }
 /* footer end */
 
+/* popup form start */
+
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 555;
+}
+
+.popup-form {
+  display: flex;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 40%;
+  gap: 2%;
+  /* align-items: center; */
+}
+
+.form-container {
+  flex: 2;
+  /* padding-right: 20px; */
+}
+
+.info-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: #f4f4f4;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  float: right;
+  cursor: pointer;
+  font-size: 35px;
+  position: absolute;
+    top: 10%;
+    right: 28%;
+    color: white;
+}
+
+#apply_course {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.illestetorIconDiv{
+  border: 1px solid #ced4da;
+  padding: 10px;
+  background: white;
+  width: 150px;
+  text-align: center;
+}
+.iconsDiv{
+  display: flex;
+  gap: 2%;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 2%;
+  
+}
+.iconsParentDiv{
+  display: flex;
+  gap : 2%;
+  width: 100%;
+  flex-direction: column;
+}
+.illestetorIconDiv p{
+  font-size: 13px;
+  text-align: center;
+  font-weight: 600;
+}
+.illestetorIconDiv img{
+  max-width: 40%;
+  margin: 5%;
+}
+.info-container h3{
+  color: orange;
+  font-size: 17px;
+  margin-bottom: 5%;
+  width: 90%;
+  font-weight: 500;
+  font-family: system-ui;
+}
+.popupSubmit{
+  border: none;
+    background-color: orange;
+    color: white;
+    width: 98%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    max-width: 20%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 5%;
+}
+.popupLeadForm input, .popupLeadForm select{
+width: 100% !important;
+}
+.popupLogoCompany{
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  border-bottom: 1px solid #ced4da;
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+}
+.popupLogoCompany h3{
+  font-size: 24px;
+  font-weight: 600;
+  color: orange;
+  font-family: system-ui;
+}
+.popupLogoCompany p{
+  font-size: 17px;
+  font-weight: 600;
+  color: black;
+  font-family: system-ui;
+}
+.popupLogoCompany img{
+  max-width: 70px;
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  /* padding-left: 24px;
+  padding-right: 24px; */
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.popupSubmit:hover{
+  background-color: #d3931e;
+}
+#submit:hover{
+  background-color: #d3931e !important;
+}
+/* popup form end */
+.flexColumnDiv{
+  flex-direction: column !important;
+}
+.collegeDetailsSpan{
+  color: white;
+  font-size: 14px;
+  font-family: system-ui;
+  margin-right: 2%;
+
+}
+.collegeDetailsSpan .fa-solid{
+  margin-right: 5px;
+}
+.seconBannerImg{
+  height: 25vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: url(Assets/colleges/mukesh\ ptel\ college.png);
+}
+.thirdBannerImg{
+  height: 25vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: url(Assets/colleges/vit.png);
+}
+.fourthImgBanner{
+  height: 25vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: url(Assets/colleges/shiv\ nadar.png);
+}
+.fifthImgBanner{
+  height: 25vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: url(Assets/colleges/amity.png);
+}
+.sixthBannerImg{
+  height: 25vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: url(Assets/colleges/Veermata\ Jijabai\ Technological.png);
+}
+.seventhBannerImg{
+  height: 25vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: url(Assets/colleges/sardar\ college.png);
+}
+.eigthBannerImg{
+  height: 25vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: url(Assets/colleges/Amrita\ Vishwa\ Vidyapeetham\,\ Coimbatore.png);
+}
+.ninthBannerImg{
+  height: 25vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: url(Assets/colleges/Pune\ Institute\ of\ Computer\ Technology\,\ Pune.png);
+}
+.tenthBannerImg{
+  height: 25vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: url(Assets/colleges/College\ Of\ Engineering\ Pune\,\ Pune.png);
+}
+.vitWidth{
+  width: 100%;
+}
+.bannerAlignCenter h1{
+  font-size: 60px;
+  margin-right: 5%;
+}
+
+
+/* faq start */
+
+
+.faq-container {
+  max-width: 100%;
+  margin: 50px auto;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.question {
+  background-color: #464355;
+  color: white;
+  padding: 11px;
+  margin: 0;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.answer {
+  padding: 15px;
+  margin: 0;
+  display: none;
+}
+
+/* faq end */
+
+
 /* media query */
 
 @media only screen and (max-width: 1000px) {
+  .newsDiv{
+    width: 100%;
+    margin-bottom: 3%;
+  }
+  .newsFlexDiv{
+    flex-direction: column;
+  }
+  /* popup form start */
+.info-container{
+  display: none;
+}
+.close-btn{
+top: 2%;
+}
+
+
+  /* popup form start */
+
   #formParentDiv{
     width: 100%;
   }
@@ -520,6 +963,17 @@ cursor: pointer ;
       width: 50%;
       text-align: end;
   }
+  .footerresponsive{
+    flex-direction: column-reverse;
+  }
+  .socialIcons{
+    margin-bottom: 4%;
+    margin-top: 4%;
+    text-align: center;
+  }
+  .copyright {
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 750px){
 .responsiveNone{
@@ -528,10 +982,48 @@ cursor: pointer ;
 .headerLogo img{
   max-width: 100px;
 }
+  /* popup form */
+
+  .popupLogoCompany{
+    flex-direction: column !important;
+  }
+  .popupSubmit{
+    max-width: 50%;
+  }
+  .popup-form{
+    max-width: 80%;
+  }
+  .close-btn{
+    top: 2%;
+    right: 5%;
+    }
+  /* popup form */
 }
 
 
 @media only screen and (max-width: 450px){
+  .bannerSpacing{
+    max-width: 100% !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  .bannerSpacingFlex{
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  .responsiveMarginLeft span:nth-last-child(-n+2) {
+    display: none;
+  }
+  /* popup form */
+
+  .popupLogoCompany{
+    flex-direction: column !important;
+  }
+  .popupSubmit{
+    max-width: 50%;
+  }
+
+  /* popup form */
   .bannerAlignCenter h1 {
     font-size: 22px;
     margin-bottom: 2%;
@@ -546,6 +1038,7 @@ cursor: pointer ;
   }
   .collegeTitle h3{
     margin-top: 3%;
+    
   }
   option,select,input, #submit{
     font-size: 15px;
@@ -553,10 +1046,87 @@ cursor: pointer ;
   /* .headerFlex{
    flex-direction: column;
   } */
-
+.responsiveheading{
+  font-size: 20px;
+}
+.firstBannerImg{
+  height: 30vh;
+  background-position: top;
+  background-image: url(Assets/colleges/birla\ institute\ responsive.png);
+}
+.seconBannerImg{
+  height: 30vh;
+  background-position: top;
+background-image: url(Assets/colleges/mukesh\ ptel\ college\ responsive.png);
+}
+.thirdBannerImg{
+  height: 30vh;
+  background-position: top;
+background-image: url(Assets/colleges/vit\ responsive.png);
+}
+.fourthImgBanner{
+  height: 30vh;
+  background-position: top;
+background-image: url(Assets/colleges/shiv\ nadar\ responsive.png);
+}
+.fifthImgBanner{
+  height: 30vh;
+  background-position: top;
+background-image: url(Assets/colleges/amity\ responsive.png);
+}
+.sixthBannerImg{
+  height: 35vh;
+  background-position: top;
+background-image: url(Assets/colleges/Veermata\ Jijabai\ Technological\ responsive.png);
+}
+.seventhBannerImg{
+  height: 35vh;
+  background-position: top;
+background-image: url(Assets/colleges/sardar\ college\ responsive.png);
+}
+.eigthBannerImg{
+  height: 35vh;
+  background-position: top;
+background-image: url(Assets/colleges/Amrita\ Vishwa\ Vidyapeetham\,\ Coimbatore\ responsive.png);
+}
+.ninthBannerImg{
+  height: 35vh;
+  background-position: top;
+background-image: url(Assets/colleges/Pune\ Institute\ of\ Computer\ Technology\,\ Pune\ responsive.png);
+}
+.tenthBannerImg{
+  height: 35vh;
+  background-position: top;
+background-image: url(Assets/colleges/College\ Of\ Engineering\ Pune\,\ Pune\ responsive.png);
+}
+.collegeTitle h3{
+  font-size: 17px;
+}
+.responsiveMarginLeft{
+  margin-left: 4%;
+  padding-right: 2%;
+}
+.boxPadding{
+  padding: 10px;
+}
+.collegeHeading  {
+  justify-content: center;
+}
+.popup-form{
+  width: 100%;
+  max-width: 95%;
+}
+.close-btn{
+  top: 0%;
+  right: 4%;
+}
 }
 
 @media only screen and (max-width: 350px) {
+  .bannerSpacingFlex{
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
   .collegelist {
     width: 100%;
   }
@@ -564,4 +1134,11 @@ cursor: pointer ;
     font-size: 19px;
     margin-bottom: 2%;
   }
+  .boxPadding{
+    padding: 0;
+  }
 }
+
+
+
+

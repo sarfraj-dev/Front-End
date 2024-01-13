@@ -27,10 +27,126 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"
     />
     <!-- slick slider jquery end -->
+    <!-- tailwind start -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- tailwind end -->
 
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
   </head>
   <body>
+    <!-- popup form -->
+
+    <div class="popup-container" id="popupContainer">
+      <!-- <span class="close-btn" onclick="closePopup()">&times;</span> -->
+
+      <div class="popup-form">
+        <!-- <div class="info-container">
+          <h3>
+            How Only Education helps you in <br />
+            Admission
+          </h3>
+          <div class="iconsParentDiv">
+            <div class="iconsDiv">
+              <div class="illestetorIconDiv">
+                <img src="Assets/popup/brochure.svg" alt="" />
+                <p>Brochure Details</p>
+              </div>
+              <div class="illestetorIconDiv">
+                <img src="Assets/popup/brochure.svg" alt="" />
+                <p>Check Detailed Fees</p>
+              </div>
+            </div>
+            <div class="iconsDiv">
+              <div class="illestetorIconDiv">
+                <img src="Assets/popup/guest-list.png" alt="" />
+
+                <p>Shortlist & Apply</p>
+              </div>
+              <div class="illestetorIconDiv">
+                <img src="Assets/popup/24-hours-support.png" alt="" />
+
+                <p>24/7 Counselling</p>
+              </div>
+            </div>
+            <div class="iconsDiv">
+              <div class="illestetorIconDiv">
+                <img src="Assets/popup/education.png" alt="" />
+
+                <p>Scholarships</p>
+              </div>
+              <div class="illestetorIconDiv">
+                <img src="Assets/popup/deadline.png" alt="" />
+
+                <p>Application Deadlines</p>
+              </div>
+            </div>
+          </div>
+
+        </div> -->
+        <div class="form-container">
+          <div class="popupLogoCompany">
+            <img src="Assets/Only Educaton Logo1.png" alt="" />
+            <div>
+              <h3>Register Now To Apply</h3>
+              <p>Get details and latest updates</p>
+            </div>
+          </div>
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <form id="leadForm" class="popupLeadForm">
+            <input
+              type="text"
+              name="Full Name"
+              placeholder="Full Name"
+              required
+            />
+            <input
+              type="text"
+              name="Mobile Number"
+              placeholder="Number"
+              required
+              id="mobileNumber"
+            />
+            <p id="mobileError" style="color: red"></p>
+
+            <input type="email" name="Email Id" placeholder="Email" required />
+            <input type="text" name="City" placeholder="City" required />
+            <!-- <select
+              name="Stream"
+              id="stream"
+              class=""
+              onchange="updateCourseOptions()"
+            >
+              <option value="">Select Stream</option>
+              <option value="undergraduation">undergraduation</option>
+              <option value="post graduation">post graduation</option>
+            </select> -->
+
+            <!-- <select name="Sub Stream" id="apply_course" class="form-control">
+              <option value="">Select Course</option>
+              <option value="Medical">Medical</option>
+              <option value="Engineering">Engineering</option>
+              <option value="Pharmacy">Pharmacy</option>
+              <option value="Law">Law</option>
+              <option value="Management">Management</option>
+              <option value="Others">Others</option>
+            </select> -->
+
+            <p name="Date" id="currentDate"></p>
+
+            <button
+              type="button"
+              class="submit-btn popupSubmit"
+              onclick="submitForm()"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--popup end  -->
+
     <!--  header start -->
     <!-- <section>
       <div class="headerDivSpacing spacingDiv">
@@ -61,22 +177,20 @@
 
     <section>
       <div class="bannerImg">
-        <div class="spacingDiv">
-          <div class="flexDiv bannerAlignCenter bannerTextTop">
+        <div class="spacingDiv bannerSpacing">
+          <div
+            class="flexDiv bannerAlignCenter bannerTextTop bannerSpacingFlex"
+          >
             <h1>Get Admission In Top Colleges In India & Abroad</h1>
 
             <!-- form start -->
             <div id="formParentDiv">
               <form
-                action=""
-                method="post"
-                name="leadForm"
-                onsubmit="return validateForm()"
+                name="leadData"
+                onsubmit="return submitForm(event)"
                 class="formContainer"
               >
-                <h4 class="marginBottom">
-                  Fill in your details for a free counselling session
-                </h4>
+                <h4 class="marginBottom">Register Now To Apply</h4>
                 <input
                   type="text"
                   name="Full Name"
@@ -124,9 +238,8 @@
                   <option value="Management">Management</option>
                   <option value="Others">Others</option>
                 </select>
-                
-                <p name="Date" id="currentDate"></p>
 
+                <p name="Date" id="currentDate"></p>
 
                 <input
                   type="submit"
@@ -144,15 +257,72 @@
     </section>
     <!--  banner section end-->
 
+    <!-- news slider  section start -->
+    <section>
+      <div class="spacingDiv">
+        <h2 class="sectionTitle">Latest Notification</h2>
+
+        <div class="newsFlexDiv newsParentDiv">
+          <div class="newsDiv">
+            <div class="newsHeadingDiv">
+              <img src="Assets/Amrita Vishwa Vidyapeetham.png" alt="" />
+              <h3>Amrita Vishwa Vidyapeetham</h3>
+            </div>
+            <p>
+              Amrita Vishwa Vidyapeetham, Coimbatore has issued the admit card
+              for Amrita Engineering Entrance Examination. AEEE exam phase 1 is
+              scheduled to be held from January 16 to January 22, 2024.
+            </p>
+          </div>
+          <div class="newsDiv">
+            <div class="newsHeadingDiv">
+              <img src="Assets/jee.png" alt="" />
+              <h3>JEE Main 2024</h3>
+            </div>
+            <p>
+              JEE Main 2024 exam will be held in two sessions. While the first
+              session will be held from January 24 to February 1, the second and
+              final session will be held between April 1 to 15, 2024
+            </p>
+          </div>
+          <div class="newsDiv">
+            <div class="newsHeadingDiv">
+              <img src="Assets/gatellogo.png" alt="" />
+              <h3>JEE Advanced 2024</h3>
+            </div>
+            <p>
+              The JEE Advanced 2024 registration process for Indian nationals
+              will begin on April 21, 2024, whereas foreign nationals can apply
+              from April 15, 2024.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- news slider  section end -->
+
     <!-- Top College Start -->
     <section>
       <div class="spacingDiv">
         <h2 class="sectionTitle">Top Colleges</h2>
-        <div class="collegeListDiv flexDiv marginBottom">
+        <div class="collegeListDiv flexDiv marginBottom flexColumnDiv">
           <div class="collegelist boxPadding">
-            <div class="collegeTitle collegeHeading">
+            <div class="collegeTitle collegeHeading firstBannerImg">
               <img src="Assets/BITS_Pilani-Logo.svg.png" alt="" />
-              <h3>Birla Institute of Technology And Science, Pilani</h3>
+              <div class="responsiveMarginLeft">
+                <h3>Birla Institute of Technology And Science, Pilani</h3>
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-location-dot"></i> Hyderabad,
+                  Telangana</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-star"></i> Deemed University</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-building"></i>Estd 2008</span
+                >
+              </div>
             </div>
 
             <div class="collegeDegree flexDiv marginBottom">
@@ -232,12 +402,15 @@
                 </span>
               </p>
             </div>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="applyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="applyNow formPopupButton">
+              Apply Now
+            </button>
 
             <button class="readMore" onclick="toggleReadMore(this)">
               Read More
@@ -381,12 +554,27 @@
 
           <!-- second item -->
           <div class="collegelist boxPadding">
-            <div class="collegeTitle collegeHeading">
+            <div class="collegeTitle collegeHeading seconBannerImg">
               <img src="Assets/mukesh.png" alt="" />
-              <h3>
-                Mukesh Patel School of Technology Management & Engineering,
-                Mumbai
-              </h3>
+
+              <div class="responsiveMarginLeft">
+                <h3>
+                  Mukesh Patel School of Technology Management & Engineering,
+                  Mumbai
+                </h3>
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Mumbai, Maharashtra</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-star" aria-hidden="true"></i>
+                  Private</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-building" aria-hidden="true"></i>Estd
+                  2006</span
+                >
+              </div>
             </div>
 
             <div class="collegeDegree flexDiv marginBottom">
@@ -467,12 +655,17 @@
                 </span>
               </p>
             </div>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="applyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="applyNow formPopupButton">
+              Apply Now
+            </button>
+
+            <!-- <button id="openPopup" class="applyNow">Apply Now</button> -->
 
             <button class="readMore" onclick="toggleReadMore(this)">
               Read More
@@ -550,14 +743,29 @@
         </div>
 
         <!-- second flex div -->
-        <div class="collegeListDiv flexDiv marginBottom">
+        <div class="collegeListDiv flexDiv marginBottom flexColumnDiv">
           <div class="collegelist boxPadding">
-            <div class="collegeTitle collegeHeading">
+            <div class="collegeTitle collegeHeading thirdBannerImg">
               <img
                 src="Assets/Vellore_Institute_of_Technology_seal_2017.svg.png"
                 alt=""
               />
-              <h3>Vellore Institute of Technology, Vellore</h3>
+              <div class="responsiveMarginLeft vitWidth">
+                <h3>Vellore Institute of Technology, Vellore</h3>
+
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Vellore, Tamil Nadu</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-star" aria-hidden="true"></i> Deemed To
+                  Be University</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-building" aria-hidden="true"></i>Estd
+                  1984</span
+                >
+              </div>
             </div>
 
             <div class="collegeDegree flexDiv marginBottom">
@@ -642,12 +850,15 @@
                 </span>
               </p>
             </div>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="applyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="applyNow formPopupButton">
+              Apply Now
+            </button>
 
             <button class="readMore" onclick="toggleReadMore(this)">
               Read More
@@ -810,9 +1021,24 @@
 
           <!-- second item -->
           <div class="collegelist boxPadding">
-            <div class="collegeTitle collegeHeading">
+            <div class="collegeTitle collegeHeading fourthImgBanner">
               <img src="Assets/noida.png" alt="" />
-              <h3>Shiv Nadar University, Noida</h3>
+              <div class="responsiveMarginLeft vitWidth">
+                <h3>Shiv Nadar University, Noida</h3>
+
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Greater Noida, Uttar Pradesh</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-star" aria-hidden="true"></i> Private
+                  University</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-building" aria-hidden="true"></i>Estd
+                  2011</span
+                >
+              </div>
             </div>
 
             <div class="collegeDegree flexDiv marginBottom">
@@ -889,12 +1115,15 @@
                 </span>
               </p>
             </div>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="applyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="applyNow formPopupButton">
+              Apply Now
+            </button>
 
             <button class="readMore" onclick="toggleReadMore(this)">
               Read More
@@ -981,11 +1210,26 @@
         <!-- flex div end -->
 
         <!-- third flex div -->
-        <div class="collegeListDiv flexDiv marginBottom">
+        <div class="collegeListDiv flexDiv marginBottom flexColumnDiv">
           <div class="collegelist boxPadding">
-            <div class="collegeTitle collegeHeading resizeImgDiv">
+            <div class="collegeTitle collegeHeading fifthImgBanner">
               <img src="Assets/Amity_University_logo.png" alt="" />
-              <h3>Amity University, Noida</h3>
+              <div class="responsiveMarginLeft vitWidth">
+                <h3>Amity University, Noida</h3>
+
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Noida, Uttar Pradesh</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-star" aria-hidden="true"></i> Private
+                  University</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-building" aria-hidden="true"></i>Estd
+                  1986</span
+                >
+              </div>
             </div>
 
             <div class="collegeDegree flexDiv marginBottom">
@@ -1076,12 +1320,15 @@
                 </span>
               </p>
             </div>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="applyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="applyNow formPopupButton">
+              Apply Now
+            </button>
 
             <button class="readMore" onclick="toggleReadMore(this)">
               Read More
@@ -1200,9 +1447,24 @@
 
           <!-- second item -->
           <div class="collegelist boxPadding">
-            <div class="collegeTitle collegeHeading resizeImgDivSecond">
+            <div class="collegeTitle collegeHeading sixthBannerImg">
               <img src="Assets/vjti-logo.png" alt="" />
-              <h3>Veermata Jijabai Technological Institute, Mumbai</h3>
+              <div class="responsiveMarginLeft vitWidth">
+                <h3>Veermata Jijabai Technological Institute, Mumbai</h3>
+
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Mumbai, Maharashtra</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-star" aria-hidden="true"></i> Private
+                  (Autonomous)</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-building" aria-hidden="true"></i>Estd
+                  1887</span
+                >
+              </div>
             </div>
 
             <div class="collegeDegree flexDiv marginBottom">
@@ -1297,12 +1559,15 @@
                 </span>
               </p>
             </div>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="applyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="applyNow formPopupButton">
+              Apply Now
+            </button>
 
             <button class="readMore" onclick="toggleReadMore(this)">
               Read More
@@ -1393,11 +1658,26 @@
 
         <!-- fourth div start -->
 
-        <div class="collegeListDiv flexDiv marginBottom">
+        <div class="collegeListDiv flexDiv marginBottom flexColumnDiv">
           <div class="collegelist boxPadding">
-            <div class="collegeTitle collegeHeading">
+            <div class="collegeTitle collegeHeading seventhBannerImg">
               <img src="Assets/SPIT Mumbai.png" alt="" />
-              <h3>Sardar Patel Institute of Technology, Mumbai</h3>
+              <div class="responsiveMarginLeft vitWidth">
+                <h3>Sardar Patel Institute of Technology, Mumbai</h3>
+
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Mumbai, Maharashtra</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-star" aria-hidden="true"></i> Private
+                  (Autonomous)</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-building" aria-hidden="true"></i>Estd
+                  2005</span
+                >
+              </div>
             </div>
 
             <div class="collegeDegree flexDiv marginBottom">
@@ -1487,12 +1767,15 @@
                 </span> -->
               </p>
             </div>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="applyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="applyNow formPopupButton">
+              Apply Now
+            </button>
 
             <button class="readMore" onclick="toggleReadMore(this)">
               Read More
@@ -1583,9 +1866,24 @@
 
           <!-- second item -->
           <div class="collegelist boxPadding">
-            <div class="collegeTitle collegeHeading">
+            <div class="collegeTitle collegeHeading eigthBannerImg">
               <img src="Assets/Amrita Vishwa Vidyapeetham.png" alt="" />
-              <h3>Amrita Vishwa Vidyapeetham, Coimbatore</h3>
+              <div class="responsiveMarginLeft vitWidth">
+                <h3>Amrita Vishwa Vidyapeetham, Coimbatore</h3>
+
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Coimbatore, Tamil Nadu</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-star" aria-hidden="true"></i> Deemed To
+                  Be University</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-building" aria-hidden="true"></i>Estd
+                  2003</span
+                >
+              </div>
             </div>
 
             <div class="collegeDegree flexDiv marginBottom">
@@ -1684,12 +1982,15 @@
                 </span> -->
               </p>
             </div>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="applyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="applyNow formPopupButton">
+              Apply Now
+            </button>
 
             <button class="readMore" onclick="toggleReadMore(this)">
               Read More
@@ -1778,11 +2079,25 @@
         <!--  fourth div end -->
 
         <!-- fifth div start -->
-        <div class="collegeListDiv flexDiv marginBottom">
+        <div class="collegeListDiv flexDiv marginBottom flexColumnDiv">
           <div class="collegelist boxPadding">
-            <div class="collegeTitle collegeHeading">
+            <div class="collegeTitle collegeHeading ninthBannerImg">
               <img src="Assets/picte.jpeg" alt="" />
-              <h3>Pune Institute of Computer Technology, Pune</h3>
+              <div class="responsiveMarginLeft vitWidth">
+                <h3>Pune Institute of Computer Technology, Pune</h3>
+
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Pune, Maharashtra</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-star" aria-hidden="true"></i> Private
+                </span>
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-building" aria-hidden="true"></i>Estd
+                  1983</span
+                >
+              </div>
             </div>
 
             <div class="collegeDegree flexDiv marginBottom">
@@ -1872,12 +2187,15 @@
                 </span> -->
               </p>
             </div>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="applyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="applyNow formPopupButton">
+              Apply Now
+            </button>
 
             <button class="readMore" onclick="toggleReadMore(this)">
               Read More
@@ -1965,9 +2283,24 @@
 
           <!-- second item -->
           <div class="collegelist boxPadding">
-            <div class="collegeTitle collegeHeading resizeImgDivThird">
+            <div class="collegeTitle collegeHeading tenthBannerImg">
               <img src="Assets/COEP Pune.png" alt="" />
-              <h3>College Of Engineering Pune, Pune</h3>
+              <div class="responsiveMarginLeft vitWidth">
+                <h3>College Of Engineering Pune, Pune</h3>
+
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Pune, Maharashtra</span
+                >
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-star" aria-hidden="true"></i> Public
+                  (Autonomous)
+                </span>
+                <span class="collegeDetailsSpan"
+                  ><i class="fa-solid fa-building" aria-hidden="true"></i>Estd
+                  1854</span
+                >
+              </div>
             </div>
 
             <div class="collegeDegree flexDiv marginBottom">
@@ -2066,12 +2399,15 @@
                 </span> -->
               </p>
             </div>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="applyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="applyNow formPopupButton">
+              Apply Now
+            </button>
 
             <button class="readMore" onclick="toggleReadMore(this)">
               Read More
@@ -2185,12 +2521,15 @@
               exam. This exam is acceptable for the admission in various
               B.Tech/B.E Programs.
             </p>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="ExamApplyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="ExamApplyNow formPopupButton">
+              Apply Now
+            </button>
           </div>
         </div>
 
@@ -2221,12 +2560,15 @@
               JEE Advanced is applicable for admission in Bachelor’s, Integrated
               Master’s and Dual Degree programs in IITs.
             </p>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="ExamApplyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="ExamApplyNow formPopupButton">
+              Apply Now
+            </button>
           </div>
         </div>
         <!-- second exam end -->
@@ -2258,12 +2600,15 @@
               BITSAT is a university level exam. BITSAT is conducted for
               admission in B.E, B.Pharma and M.Sc.
             </p>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="ExamApplyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="ExamApplyNow formPopupButton">
+              Apply Now
+            </button>
           </div>
         </div>
         <!-- third exam end -->
@@ -2295,12 +2640,15 @@
               WBJEE exam is conducted for admissions in the undergraduate
               courses in engineering and pharmacy.
             </p>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="ExamApplyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="ExamApplyNow formPopupButton">
+              Apply Now
+            </button>
           </div>
         </div>
         <!-- fourth exam end -->
@@ -2332,12 +2680,16 @@
               COMEDK UGET is a State level exam for admission to
               B.E/B.Tech/B.Arch courses.
             </p>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="ExamApplyNow"
               >Apply Now</a
-            >
+            > -->
+
+            <button id="openPopup" class="ExamApplyNow formPopupButton">
+              Apply Now
+            </button>
           </div>
         </div>
         <!-- fifth exam end -->
@@ -2369,12 +2721,15 @@
               VITEEE is a national level engineering entrance exam for admission
               in B.Tech programs.
             </p>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="ExamApplyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="ExamApplyNow formPopupButton">
+              Apply Now
+            </button>
           </div>
         </div>
         <!-- sixth exam end -->
@@ -2406,12 +2761,15 @@
               MHT CET is a state-level entrance exam conducted for admission
               into Engineering and Allied Health Sciences courses in Maharashtra
             </p>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="ExamApplyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="ExamApplyNow formPopupButton">
+              Apply Now
+            </button>
           </div>
         </div>
         <!-- sevent exam end -->
@@ -2443,12 +2801,15 @@
               MET is a university-level exam for admission to various UG and PG
               degree programs
             </p>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="ExamApplyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="ExamApplyNow formPopupButton">
+              Apply Now
+            </button>
           </div>
         </div>
         <!-- eigth exam end -->
@@ -2479,12 +2840,15 @@
             <p class="marginBottom mainsDetailsPara">
               Uttar Pradesh Combined Entrance Test
             </p>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="ExamApplyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="ExamApplyNow formPopupButton">
+              Apply Now
+            </button>
           </div>
         </div>
         <!-- ninth exam end -->
@@ -2516,12 +2880,15 @@
               JKCET is an entrance exam conducted by JKBOPEE, for admission to
               B. Tech and B. Arch programs
             </p>
-            <a
+            <!-- <a
               href="https://docs.google.com/forms/d/1W_VFU2B48A75njXI_Apsqs0PVBXfHqS7R_2D-ltboMM/viewform?ts=6597a3d2&edit_requested=true"
               target="_blank"
               class="ExamApplyNow"
               >Apply Now</a
-            >
+            > -->
+            <button id="openPopup" class="ExamApplyNow formPopupButton">
+              Apply Now
+            </button>
           </div>
         </div>
         <!-- tenth exam end -->
@@ -2532,7 +2899,7 @@
     <!-- top placement college -->
     <section>
       <div class="spacingDiv">
-        <h2 class="sectionTitle">Top Placement Colleges</h2>
+        <h2 class="sectionTitle responsiveheading">Top Placement Colleges</h2>
         <div class="collegeCarousel">
           <div class="wrapper">
             <div class="my-slider">
@@ -2603,10 +2970,67 @@
     </section>
     <!-- top placement college  end-->
 
+    <!-- faq start  -->
+
+    <section>
+      <div class="spacingDiv">
+        <div class="faq-container">
+          <div class="faq-item open">
+            <h3 class="question">
+              What are the various engineering entrance exams in India?
+            </h3>
+            <div class="answer">
+              The main exams are JEE Main & Advanced, BITSAT, and state-specific
+              exams like CETs. Each has its eligibility, syllabus, and weightage
+              for college admissions. Explore our comparison guides to choose
+              the right one for you!
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3 class="question">
+              What is the difference between JEE Main and JEE Advanced?
+            </h3>
+            <div class="answer">
+              JEE Main acts as a screening test for JEE Advanced, which is for
+              IIT admissions. JEE Main is conducted twice a year, while JEE
+              Advanced is once. Both test Physics, Chemistry, and Mathematics,
+              but JEE Advanced is tougher and focuses on deeper concepts.
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3 class="question">
+              Are there alternative engineering entrance exams for admission to
+              colleges other than IITs?
+            </h3>
+            <div class="answer">
+              Yes, besides JEE, there are several other engineering entrance
+              exams in India for admission to various engineering colleges.
+              Exams like BITSAT, VITEEE, WBJEE, and state-level engineering
+              entrance exams offer opportunities for students to secure
+              admission in esteemed engineering institutions across the country.
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3 class="question">
+              What are the different entrance exams for engineering admissions
+              in India and abroad?
+            </h3>
+            <div class="answer">
+              In India, popular options include JEE Main & Advanced, BITSAT,
+              state-specific CETs, and university-specific exams.
+              Internationally, SAT, ACT, and various university exams are used.
+            </div>
+          </div>
+          <!-- Add more FAQ items as needed -->
+        </div>
+      </div>
+    </section>
+    <!-- faq end  -->
+
     <!-- footer start -->
     <section class="footerDiv">
       <div class="spacingDiv">
-        <footer class="flexDiv">
+        <footer class="flexDiv footerresponsive">
           <div class="copyright">
             <p>
               © 2024 <a href="https://onlyeducation.in/"> Only Education</a>.
