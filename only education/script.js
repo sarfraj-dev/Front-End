@@ -456,3 +456,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var intervalId = setInterval(changeBackground, 2000); // Change image every 4 seconds on larger screens
 });
+
+
+// latest notification
+

@@ -1129,6 +1129,16 @@ background-image: url(Assets/colleges/College\ Of\ Engineering\ Pune\,\ Pune\ re
 .bannerSpacingFlex{
   padding: 10% 0;
 }
+.newsHeadingDiv h3{
+  font-weight: 700;
+  font-size: 17px;
+}
+.collegeDegree h4{
+  margin-bottom: 2%;
+}
+.my-slider{
+  padding: 25px;
+}
 }
 
 @media only screen and (max-width: 350px) {
@@ -1149,7 +1159,15 @@ background-image: url(Assets/colleges/College\ Of\ Engineering\ Pune\,\ Pune\ re
   .my-slider{
     padding: 0 19px;
   }
-
+  .slick-prev{
+    left: 0;
+  }
+  .slick-next{
+    right: 10px;
+  }
+  .collegePlacement h4{
+    font-size: 17px;
+  }
 
 }
 
@@ -1190,3 +1208,27 @@ background-image: url(Assets/colleges/College\ Of\ Engineering\ Pune\,\ Pune\ re
   color: #fff; /* Set the color to white or any other color you prefer */
   font-size: 30px;
 }
+
+
+.newsParentDiv {
+  overflow: hidden;
+}
+
+.newsDiv {
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #ddd;
+  animation: scroll infinite linear 15s; /* Adjust the duration as needed */
+  box-shadow: none;
+
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
