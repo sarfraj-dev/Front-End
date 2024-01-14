@@ -29,7 +29,7 @@ gap: 2%;
   /* justify-content: space-evenly !important; */
 }
 .newsHeadingDiv h3{
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
 }
 .newsDiv p, .newsReadMore{
@@ -914,16 +914,61 @@ width: 100% !important;
 /* faq end */
 
 
+/* news notification start */
+
+
+.newsParentDiv {
+  overflow: hidden;
+}
+
+.newsDiv {
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #ddd;
+  animation: scroll infinite linear 15s;
+  box-shadow: none;
+  transition: transform 0.3s; 
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px rgba(15,33,61,0.12), 0px 2px 12px rgba(15,33,61,0.1);
+}
+
+/* .newsDiv:hover {
+  transform: scale(1.1); 
+} */
+.newsParentDiv:hover .newsDiv {
+  cursor: pointer;
+  animation-play-state: paused; 
+}
+
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* news notification end */
+
 /* media query */
 
 @media only screen and (max-width: 1000px) {
+  .responsiveSliderNews{
+    display: -webkit-box;
+  }
   .newsDiv{
+    width: 100%;
+  }
+  /* .newsDiv{
     width: 100%;
     margin-bottom: 3%;
   }
   .newsFlexDiv{
     flex-direction: column;
-  }
+  } */
   /* popup form start */
 .info-container{
   display: none;
@@ -1000,6 +1045,8 @@ top: 2%;
     right: 5%;
     }
   /* popup form */
+
+  
 }
 
 
@@ -1209,7 +1256,7 @@ background-image: url(Assets/colleges/College\ Of\ Engineering\ Pune\,\ Pune\ re
   font-size: 30px;
 }
 
-
+/*
 .newsParentDiv {
   overflow: hidden;
 }
@@ -1218,7 +1265,7 @@ background-image: url(Assets/colleges/College\ Of\ Engineering\ Pune\,\ Pune\ re
   box-sizing: border-box;
   padding: 20px;
   border: 1px solid #ddd;
-  animation: scroll infinite linear 15s; /* Adjust the duration as needed */
+  animation: scroll infinite linear 15s; 
   box-shadow: none;
 
 }
@@ -1231,4 +1278,8 @@ background-image: url(Assets/colleges/College\ Of\ Engineering\ Pune\,\ Pune\ re
     transform: translateX(-100%);
   }
 }
+*/
+
+
+
 
