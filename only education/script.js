@@ -45,7 +45,7 @@ $(document).ready(function () {
   $(".my-slider").slick({
     slidesToShow: 4,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
     dots: false,
     speed: 300,
     infinite: true,
@@ -140,7 +140,16 @@ function validateMobileNumber() {
 
 // form end
 
+
+
+
+
+
+
+
+
 // current date start
+/*
 
 const date = new Date();
 const dd = date.getDate();
@@ -149,8 +158,30 @@ const yyyy = date.getFullYear();
 const newDate = dd + "-" + mm + "-" + yyyy;
 const p = document.getElementById("currentDate");
 p.innerHTML = newDate;
+*/
 
+
+/*
+
+const date = new Date();
+const dd = date.getDate();
+const mm = date.getMonth() + 1;
+const yyyy = date.getFullYear();
+const hours = date.getHours();
+const minutes = date.getMinutes();
+
+const newDate = `${dd}-${mm}-${yyyy} ${hours}:${minutes}`;
+
+const p = document.getElementById("currentDate");
+p.innerHTML = newDate;
+*/
 // current date end
+
+
+
+
+
+
 
 const openPopupButtons = document.querySelectorAll(".formPopupButton");
 const popupContainerDiv = document.getElementById("popupContainer");
@@ -600,5 +631,259 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   var intervalId = setInterval(changeBackground, 2000); // Change image every 4 seconds on larger screens
+});
+
+
+
+// news section start
+
+
+// var multiItemSlider = (function () {
+//   return function (selector, config) {
+//     var
+//       _mainElement = document.querySelector(selector), // основный элемент блока
+//       _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+//       _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+//       _sliderControls = _mainElement.querySelectorAll('.slider__control'), // элементы управления
+//       _sliderControlLeft = _mainElement.querySelector('.slider__control_left'), // кнопка "LEFT"
+//       _sliderControlRight = _mainElement.querySelector('.slider__control_right'), // кнопка "RIGHT"
+//       _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
+//       _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента    
+//       _positionLeftItem = 0, // позиция левого активного элемента
+//       _transform = 0, // значение транфсофрмации .slider_wrapper
+//       _step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
+//       _items = []; // массив элементов
+
+//     // наполнение массива _items
+//     _sliderItems.forEach(function (item, index) {
+//       _items.push({ item: item, position: index, transform: 0 });
+//     });
+
+//     var position = {
+//       getItemMin: function () {
+//         var indexItem = 0;
+//         _items.forEach(function (item, index) {
+//           if (item.position < _items[indexItem].position) {
+//             indexItem = index;
+//           }
+//         });
+//         return indexItem;
+//       },
+//       getItemMax: function () {
+//         var indexItem = 0;
+//         _items.forEach(function (item, index) {
+//           if (item.position > _items[indexItem].position) {
+//             indexItem = index;
+//           }
+//         });
+//         return indexItem;
+//       },
+//       getMin: function () {
+//         return _items[position.getItemMin()].position;
+//       },
+//       getMax: function () {
+//         return _items[position.getItemMax()].position;
+//       }
+//     }
+
+//     var _transformItem = function (direction) {
+//       var nextItem;
+//       if (direction === 'right') {
+//         _positionLeftItem++;
+//         if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) > position.getMax()) {
+//           nextItem = position.getItemMin();
+//           _items[nextItem].position = position.getMax() + 1;
+//           _items[nextItem].transform += _items.length * 100;
+//           _items[nextItem].item.style.transform = 'translateX(' + _items[nextItem].transform + '%)';
+//         }
+//         _transform -= _step;
+//       }
+//       if (direction === 'left') {
+//         _positionLeftItem--;
+//         if (_positionLeftItem < position.getMin()) {
+//           nextItem = position.getItemMax();
+//           _items[nextItem].position = position.getMin() - 1;
+//           _items[nextItem].transform -= _items.length * 100;
+//           _items[nextItem].item.style.transform = 'translateX(' + _items[nextItem].transform + '%)';
+//         }
+//         _transform += _step;
+//       }
+//       _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+//     }
+
+//     // обработчик события click для кнопок "назад" и "вперед"
+//     var _controlClick = function (e) {
+//       var direction = this.classList.contains('slider__control_right') ? 'right' : 'left';
+//       e.preventDefault();
+//       _transformItem(direction);
+//     };
+
+//     var _setUpListeners = function () {
+//       // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
+//       _sliderControls.forEach(function (item) {
+//         item.addEventListener('click', _controlClick);
+//       });
+//     }
+
+//     // инициализация
+//     _setUpListeners();
+
+//     return {
+//       right: function () { // метод right
+//         _transformItem('right');
+//       },
+//       left: function () { // метод left
+//         _transformItem('left');
+//       }
+//     }
+
+//   }
+// }());
+
+// var slider = multiItemSlider('.slider')
+
+
+
+
+
+
+
+
+/*
+$(document).ready(function () {
+  var itemsMainDiv = ('.MultiCarousel');
+  var itemsDiv = ('.MultiCarousel-inner');
+  var itemWidth = "";
+
+  $('.leftLst, .rightLst').click(function () {
+      var condition = $(this).hasClass("leftLst");
+      if (condition)
+          click(0, this);
+      else
+          click(1, this)
+  });
+
+  ResCarouselSize();
+
+
+
+
+  $(window).resize(function () {
+      ResCarouselSize();
+  });
+
+  //this function define the size of the items
+  function ResCarouselSize() {
+      var incno = 0;
+      var dataItems = ("data-items");
+      var itemClass = ('.item');
+      var id = 0;
+      var btnParentSb = '';
+      var itemsSplit = '';
+      var sampwidth = $(itemsMainDiv).width();
+      var bodyWidth = $('body').width();
+      $(itemsDiv).each(function () {
+          id = id + 1;
+          var itemNumbers = $(this).find(itemClass).length;
+          btnParentSb = $(this).parent().attr(dataItems);
+          itemsSplit = btnParentSb.split(',');
+          $(this).parent().attr("id", "MultiCarousel" + id);
+
+
+          if (bodyWidth >= 1200) {
+              incno = itemsSplit[3];
+              itemWidth = sampwidth / incno;
+          }
+          else if (bodyWidth >= 992) {
+              incno = itemsSplit[2];
+              itemWidth = sampwidth / incno;
+          }
+          else if (bodyWidth >= 768) {
+              incno = itemsSplit[1];
+              itemWidth = sampwidth / incno;
+          }
+          else {
+              incno = itemsSplit[0];
+              itemWidth = sampwidth / incno;
+          }
+          $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+          $(this).find(itemClass).each(function () {
+              $(this).outerWidth(itemWidth);
+          });
+
+          $(".leftLst").addClass("over");
+          $(".rightLst").removeClass("over");
+
+      });
+  }
+
+
+  //this function used to move the items
+  function ResCarousel(e, el, s) {
+      var leftBtn = ('.leftLst');
+      var rightBtn = ('.rightLst');
+      var translateXval = '';
+      var divStyle = $(el + ' ' + itemsDiv).css('transform');
+      var values = divStyle.match(/-?[\d\.]+/g);
+      var xds = Math.abs(values[4]);
+      if (e == 0) {
+          translateXval = parseInt(xds) - parseInt(itemWidth * s);
+          $(el + ' ' + rightBtn).removeClass("over");
+
+          if (translateXval <= itemWidth / 2) {
+              translateXval = 0;
+              $(el + ' ' + leftBtn).addClass("over");
+          }
+      }
+      else if (e == 1) {
+          var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+          translateXval = parseInt(xds) + parseInt(itemWidth * s);
+          $(el + ' ' + leftBtn).removeClass("over");
+
+          if (translateXval >= itemsCondition - itemWidth / 2) {
+              translateXval = itemsCondition;
+              $(el + ' ' + rightBtn).addClass("over");
+          }
+      }
+      $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+  }
+
+  //It is used to get some elements from btn
+  function click(ell, ee) {
+      var Parent = "#" + $(ee).parent().attr("id");
+      var slide = $(Parent).attr("data-slide");
+      ResCarousel(ell, Parent, slide);
+  }
+
+});
+*/
+
+
+$(document).ready(function () {
+  $(".my-slider-second").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    speed: 300,
+    infinite: true,
+    autoplaySpeed: 1000,
+    autoplay: true,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
 });
 
