@@ -1,6 +1,8 @@
 // import {sum} from './lib.js'
 const { isUtf8 } = require('buffer');
 const fs=require('fs');
+
+
 // const txt=fs.readFileSync('demo.txt', "Utf-8")
 const t1=performance.now();
 fs.readFile('demo.txt', "Utf-8",(err,txt)=>{
